@@ -2594,31 +2594,14 @@ GameObject:
   m_Component:
   - component: {fileID: 146708163}
   - component: {fileID: 146708162}
-  - component: {fileID: 146708161}
+  - component: {fileID: 146708164}
   m_Layer: 6
   m_Name: Post-process Volume
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 1206586993520771344, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &146708161
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 146708160}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b9a305e18de0c04dbd257a21cd47087, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sharedProfile: {fileID: 11400000, guid: 6d82362eb51c15248ae291b56c30148d, type: 2}
-  isGlobal: 1
-  blendDistance: 0
-  weight: 1
-  priority: 1
 --- !u!65 &146708162
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2655,6 +2638,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &146708164
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 146708160}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b9a305e18de0c04dbd257a21cd47087, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sharedProfile: {fileID: 11400000, guid: 966c5bb78554a344cbfad59888a2ae75, type: 2}
+  isGlobal: 1
+  blendDistance: 0
+  weight: 1
+  priority: 0
 --- !u!1001 &147478929
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -31910,6 +31910,7 @@ SceneRoots:
   - {fileID: 1155738063}
   - {fileID: 304976604}
   - {fileID: 578511733}
+  - {fileID: 146708163}
   - {fileID: 411145493}
   - {fileID: 1121188143}
   - {fileID: 1585397298}
@@ -31940,4 +31941,3 @@ SceneRoots:
   - {fileID: 1551373518}
   - {fileID: 1222790208}
   - {fileID: 664003939}
-  - {fileID: 146708163}
