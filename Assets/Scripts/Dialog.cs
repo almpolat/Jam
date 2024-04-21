@@ -68,7 +68,7 @@ public class Dialog : MonoBehaviour
             {
                 dialogs.Dequeue();
                
-                currentDialog = secondDialog;
+                //currentDialog = secondDialog;
                 sentenceIndex = 0;  
             }
         }

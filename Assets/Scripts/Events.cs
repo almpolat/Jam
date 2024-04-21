@@ -39,21 +39,21 @@ public class Events : MonoBehaviour
         {
             interactCanvasCin.SetActive(false);
             dialogCanvas.SetActive(false);
-            dialogManager.GetComponent<Dialog>().ResetDialog();
+           // dialogManager.GetComponent<Dialog>().ResetDialog();
         }
 
         if (other.gameObject.CompareTag("Sevgili"))
         {
             interactCanvasSevgili.SetActive(false);
             dialogCanvas.SetActive(false);
-            dialogManager.GetComponent<Dialog>().ResetDialog();
+           // dialogManager.GetComponent<Dialog>().ResetDialog();
         }
 
         if (other.gameObject.CompareTag("MaviGül"))
         {
             interactCanvasMaviGül.SetActive(false);
             dialogCanvas.SetActive(false);
-            dialogManager.GetComponent<Dialog>().ResetDialog();
+           // dialogManager.GetComponent<Dialog>().ResetDialog();
         }
     }
 
