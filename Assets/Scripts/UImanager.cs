@@ -7,6 +7,7 @@ public class UImanager : MonoBehaviour
 {
     private bool isPaused = false;
     [SerializeField] private GameObject PauseCanvas = null;
+    [SerializeField] private FPSController fpsController;
 
     public void SetActivePause(bool state)
     {
@@ -15,6 +16,10 @@ public class UImanager : MonoBehaviour
         isPaused = state;
         Cursor.visible = state;
         Cursor.lockState = state ? CursorLockMode.None : CursorLockMode.Locked;
+        if (fpsController != null)
+        {
+            fpsController.isPaused = state; 
+        }
     }
 
     private void Update()

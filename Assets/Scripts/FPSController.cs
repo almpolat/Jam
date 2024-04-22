@@ -6,6 +6,7 @@ public class FPSController : MonoBehaviour
 {
     public float movementSpeed = 5.0f;
     public float mouseSensitivity = 2.0f;
+    public bool isPaused = false;
 
     private CharacterController characterController;
     private Camera playerCamera;
@@ -26,6 +27,7 @@ public class FPSController : MonoBehaviour
 
     void Update()
     {
+        if (isPaused) return;
         // Rotation
         float horizontalRotation = Input.GetAxis("Mouse X") * mouseSensitivity;
         transform.Rotate(0, horizontalRotation, 0);
