@@ -37,6 +37,10 @@ public class UImanager : MonoBehaviour
 
     public void Restart()
     {
+        SceneManager.LoadScene(1);
+    }
+    public void Restartall()
+    {
         SceneManager.LoadScene(0);
     }
 }
