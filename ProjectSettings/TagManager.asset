@@ -8,6 +8,8 @@ TagManager:
   - Sevgili
   - Jumpscare
   - "MaviG\xFCl"
+  - Trigger
+  - Car
   layers:
   - Default
   - TransparentFX

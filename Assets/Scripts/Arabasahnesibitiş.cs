@@ -7,9 +7,13 @@ public class Arabasahnesibitiş : MonoBehaviour
 {
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Trigger"))
+        // 'other' parametresi, trigger alanına giren nesneyi temsil eder
+        // Eğer bu nesnen,in etiketi 'Car' ise, sahne yüklenir
+        Debug.Log("Çalş");
+        if (other.CompareTag("Car"))
         {
-            SceneManager.LoadScene(1);
+            // Sahne 1'i yükler
+            SceneManager.LoadScene(2);
         }
     }
 }
