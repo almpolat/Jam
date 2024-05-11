@@ -1,57 +1,41 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Events : MonoBehaviour
 {
-    public GameObject interactCanvasCin;
-    public GameObject interactCanvasMaviGül;
+   
     public GameObject MaviGül;
-    public GameObject interactCanvasSevgili;
     public GameObject dialogCanvas;
     public GameObject dialogManager;
 
+    [SerializeField] GameObject InteractPanel;
+
     private void Start()
     {
-        
+      //  EvGameManager.Instance.onSleep += Sleep;
+      
     }
+
+    private void Sleep()
+    {
+       
+    }
+
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Cin"))
+        if (other.gameObject.CompareTag("Cin") || other.gameObject.CompareTag("Sevgili") || other.gameObject.CompareTag("MaviGül"))
         {
-            interactCanvasCin.SetActive(true);
-        }
-
-        if (other.gameObject.CompareTag("Sevgili"))
-        {
-            interactCanvasSevgili.SetActive(true);
-        }
-
-        if (other.gameObject.CompareTag("MaviGül"))
-        {
-            interactCanvasMaviGül.SetActive(true);
+           InteractPanel.SetActive(true);
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.CompareTag("Cin"))
+        if (other.gameObject.CompareTag("Cin") || other.gameObject.CompareTag("Sevgili") || other.gameObject.CompareTag("MaviGül"))
         {
-            interactCanvasCin.SetActive(false);
-            dialogCanvas.SetActive(false);
-            dialogManager.GetComponent<Dialog>().ResetDialog();
-        }
-
-        if (other.gameObject.CompareTag("Sevgili"))
-        {
-            interactCanvasSevgili.SetActive(false);
-            dialogCanvas.SetActive(false);
-            dialogManager.GetComponent<Dialog>().ResetDialog();
-        }
-
-        if (other.gameObject.CompareTag("MaviGül"))
-        {
-            interactCanvasMaviGül.SetActive(false);
+            InteractPanel.SetActive(false);
             dialogCanvas.SetActive(false);
             dialogManager.GetComponent<Dialog>().ResetDialog();
         }
@@ -59,31 +43,17 @@ public class Events : MonoBehaviour
 
     private void Update()
     {
-        if (interactCanvasCin!=null && interactCanvasCin.activeInHierarchy) 
+        checkInputs();  
+    }
+
+    private void checkInputs()
+    {
+        if (InteractPanel != null && InteractPanel.activeInHierarchy)
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
                 dialogCanvas.SetActive(true);
-                interactCanvasCin.SetActive(false);
-            }
-        }
-
-        if (interactCanvasSevgili != null && interactCanvasSevgili.activeInHierarchy)
-        {
-            if (Input.GetKeyDown(KeyCode.E))
-            {
-                dialogCanvas.SetActive(true);
-                interactCanvasSevgili.SetActive(false);
-            }
-        }
-
-        if (interactCanvasMaviGül != null && interactCanvasMaviGül.activeInHierarchy)
-        {
-            if (Input.GetKeyDown(KeyCode.E))
-            {
-                
-                interactCanvasMaviGül.SetActive(false);
-                MaviGül.SetActive(false) ;
+                InteractPanel.SetActive(false);
             }
         }
     }
