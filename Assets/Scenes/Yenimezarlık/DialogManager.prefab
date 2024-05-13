@@ -1,0 +1,80 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7150579422498669396
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7976245355128483883}
+  - component: {fileID: 5007257547461491501}
+  m_Layer: 0
+  m_Name: DialogManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7976245355128483883
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7150579422498669396}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 188.86064, y: 55.58581, z: 47.007206}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5007257547461491501
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7150579422498669396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8debd3625501ea42b0144e53fd35747, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogText: {fileID: 0}
+  dialogCanvas: {fileID: 0}
+  firstDialog:
+  - Darling, I miss you so much.Life without you has no meaning for me anymore.
+  - I've already started waiting for the day I will die.
+  - '"Voice from somewhere: Hey, I can help you there.'
+  - 'I know how much you miss her, and you have just one chance for her to return.  '
+  - 'Don''t be afraid, I won''t harm you.Come closer to me. '
+  - 
+  secondDialog:
+  - "But first we need to make a deal. First you will do my task and after that \u0131
+    will help you. "
+  - Do you agree?
+  - Ok. That is a little bit scare but i will take all of the risk for her.
+  - I have two puzzle for you.Listen!
+  - Your salvation to reach God is in the soil. The earth is God's gift.
+  - From this gift, St. Valentine's love is born like a blue spirit. Her fragrance
+    illuminates your life.
+  - Find her!
+  - When he is gone, he drapes God's gift over him for the last time... Find them!
+  - 
+  thirdDialog:
+  - ucuncu
+  - cccc ccc ccc c
+  - ccccccc ccccccccccccccc
+  - ccccccc ccccccccccccccc
+  fourthDialog:
+  - 4
+  - sdad
+  - bitti
+  fifthDialog:
+  - 5
+  - 5 bitti
+  textSpeed: -0.15

@@ -10,7 +10,12 @@ TagManager:
   - "MaviG\xFCl"
   - Trigger
   - Car
+<<<<<<< HEAD
   - Yatak
+=======
+  - "Kap\u0131"
+  - "G\xF6z"
+>>>>>>> Alimert
   layers:
   - Default
   - TransparentFX
