@@ -12,11 +12,4 @@ public class Dor : MonoBehaviour
             dooranim.SetTrigger("open");
         }
     }
-    void OnTriggerExit(Collider other)
-    {
-        if (other.CompareTag("Player"))
-        {
-            dooranim.SetTrigger("close");
-        }
-    }
 }

@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Scenes/MezarlıkURP.meta
+guid: 8b46434ab05e82d4b8c819dd2e54f6f1
+========
 guid: fdde0b8fe3abeac44954bdc626630e12
+>>>>>>>> Alimert:Assets/Scenes/Yenimezarlık.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}

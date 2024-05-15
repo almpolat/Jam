@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Materials/GlowMaterial.mat.meta
+guid: 86393a3c9c6632d42876a496b9175585
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+========
+guid: c7d0747bd7053804da8250ca0ea203d4
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+>>>>>>>> Alimert:Assets/FreeAssets/LowlyPoly/Stylized Grass Texture/Materials/Stylize Terrain Diffuse.mat.meta
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

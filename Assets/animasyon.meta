@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/FreeAssets.meta
+guid: 00a147a03cd7beb42bebe7564c8c5a59
+========
 guid: 73764e008717a3e42880383947948226
+>>>>>>>> Alimert:Assets/animasyon.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
