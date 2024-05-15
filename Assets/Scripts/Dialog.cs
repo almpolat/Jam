@@ -3,19 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using System;
-using UnityEditor;
 
 public class Dialog : MonoBehaviour
 {
 
-    [Header("Dialog Settings")]
     public TextMeshProUGUI dialogText;
-    public float textSpeed;
+
     public GameObject dialogCanvas;
 
-
-
-    [Header("Dialogs")]
     public string[] firstDialog;
     public string[] secondDialog;
     public string[] thirdDialog;
@@ -23,14 +18,14 @@ public class Dialog : MonoBehaviour
     public string[] fifthDialog;
 
     private Queue<Array> dialogs = new Queue<Array>();
+
     private string[] currentDialog;
+
+    public float textSpeed;
     private int sentenceIndex;
 
-   
     void Start()
     {
-
-
         dialogs.Enqueue(firstDialog);
         dialogs.Enqueue(secondDialog);  
         dialogs.Enqueue(thirdDialog);
@@ -79,8 +74,8 @@ public class Dialog : MonoBehaviour
         }
     }
 
-    
-     void StartDialoge()
+
+    void StartDialoge()
     {
         sentenceIndex = 0;
         //StartCoroutine(TypeLine());
