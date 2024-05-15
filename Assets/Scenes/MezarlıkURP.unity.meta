@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Scenes/MezarlıkURP.unity.meta
 guid: 51c79f01698fd0144a328bbd17b0fecf
+========
+guid: 36c7f4caf440f6144a12fbfb55d6a82a
+>>>>>>>> Alimert:Assets/FreeAssets/LowlyPoly/Stylized Grass Texture/Scene/Stylize Terrain Texture.unity.meta
 DefaultImporter:
   externalObjects: {}
   userData: 
