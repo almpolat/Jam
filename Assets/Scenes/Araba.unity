@@ -1069,6 +1069,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2002158ca08126f459224b12915fbcca, type: 3}
+--- !u!1 &361869457 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7150579422498669396, guid: 2002158ca08126f459224b12915fbcca, type: 3}
+  m_PrefabInstance: {fileID: 361869456}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &367644608 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 00d969ba0e4e2d24da115ed4e020d8b4, type: 3}
@@ -48525,6 +48530,7 @@ GameObject:
   - component: {fileID: 8315430443041804840}
   - component: {fileID: 2966182397532736335}
   - component: {fileID: 5609969831068062343}
+  - component: {fileID: 8315430443041804841}
   m_Layer: 0
   m_Name: Player
   m_TagString: Car
@@ -49628,6 +49634,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PauseCanvas: {fileID: 2641728042173817158}
   fpsController: {fileID: 0}
+--- !u!114 &8315430443041804841
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8122864195269989332}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5cb2eacbef50fa4bbc219be2941d5ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  "MaviG\xFCl": {fileID: 0}
+  dialogCanvas: {fileID: 1797561253}
+  dialogManager: {fileID: 361869457}
+  InteractPanel: {fileID: 0}
 --- !u!224 &8316311860846721739
 RectTransform:
   m_ObjectHideFlags: 0
