@@ -1636,6 +1636,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: ev2
       objectReference: {fileID: 0}
+    - target: {fileID: 7422028748569890043, guid: b9da75e88fb90b04398e916c10558ec4, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 86.64658
+      objectReference: {fileID: 0}
+    - target: {fileID: 7422028748569890043, guid: b9da75e88fb90b04398e916c10558ec4, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 31.938665
+      objectReference: {fileID: 0}
+    - target: {fileID: 7422028748569890043, guid: b9da75e88fb90b04398e916c10558ec4, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.7567
+      objectReference: {fileID: 0}
+    - target: {fileID: 7422028748569890043, guid: b9da75e88fb90b04398e916c10558ec4, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -29.0725
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2086,6 +2102,11 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.01299958, y: 0.004006687, z: 0.09507767}
   m_Center: {x: -0.0000009536743, y: 2.646978e-23, z: 0.0000000018626447}
+--- !u!1 &2090538376 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 686524930087445884, guid: ad22072f531282b47b6fa5838af4f321, type: 3}
+  m_PrefabInstance: {fileID: 1532828304}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2145927593 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 781323852170728752, guid: b9da75e88fb90b04398e916c10558ec4, type: 3}
@@ -2982,7 +3003,7 @@ Transform:
   m_GameObject: {fileID: 3553943269944857519}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 718.62, y: 3.99, z: 667.98}
+  m_LocalPosition: {x: 718.62, y: 3.879, z: 667.98}
   m_LocalScale: {x: 100, y: 100, z: 100}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3243,7 +3264,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9e1f7c8b5b3d0348b0abff7eac9bbe6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PauseCanvas: {fileID: 0}
+  PauseCanvas: {fileID: 2090538376}
   fpsController: {fileID: 2933398814276034766}
 --- !u!1 &3553943269944857519
 GameObject:
