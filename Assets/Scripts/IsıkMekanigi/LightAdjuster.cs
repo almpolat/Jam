@@ -1,15 +1,15 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class HorrorEfect : MonoBehaviour
+public class LightAdjuster : MonoBehaviour
 {
-    [SerializeField] private Renderer glowRenderer;
+    [SerializeField]
+    private Renderer glowRenderer;
     private Material glowMaterial;
-    private Color emissionColor = Color.white;
-    Color baseEmissionColor;
-    [SerializeField] private Light lanternLight;
 
+
+    [SerializeField]
+    private Light lanternLight;
+    private Color baseEmissionColor;
 
     float scale;
     // Start is called before the first frame update
@@ -19,29 +19,34 @@ public class HorrorEfect : MonoBehaviour
         glowMaterial = glowRenderer.material;
 
         // Get the current emission color
-         baseEmissionColor = glowMaterial.GetColor("_EmissionColor");
+        baseEmissionColor = glowMaterial.GetColor("_EmissionColor");
 
     }
 
     // Update is called once per frame
     void Update()
     {
-        scale = LanternLight.Instance.lightScale;
+
         Effects();
     }
 
     void Effects()
     {
+        //Get scale from lantern class
+        scale = LanternLight.Instance.lightScale;
+
         // Enable the emission keyword (required for Standard Shader)
         glowRenderer.material.EnableKeyword("_EMISSION");
 
-        
 
         // Set the new emission color with the desired intensity
         Color finalEmissionColor = baseEmissionColor * Mathf.LinearToGammaSpace(scale);
+
+        // Set the glows color with changing scale
         glowMaterial.SetColor("_EmissionColor", finalEmissionColor);
 
-        lanternLight.intensity = scale * 10;
+        // Set the spot light Intensity according to the scale
+        lanternLight.intensity = scale * 20;
     }
 
 }

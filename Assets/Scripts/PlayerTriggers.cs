@@ -1,34 +1,40 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class Events : MonoBehaviour
+public class PlayerTriggers : MonoBehaviour
 {
-   
+
     public GameObject MaviGül;
     public GameObject dialogCanvas;
     public GameObject dialogManager;
+
 
     [SerializeField] GameObject InteractPanel;
 
     private void Start()
     {
-      //  EvGameManager.Instance.onSleep += Sleep;
-      
+        //  EvGameManager.Instance.onSleep += Sleep;
+
     }
 
     private void Sleep()
     {
-       
+
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Cin") || other.gameObject.CompareTag("Sevgili") || other.gameObject.CompareTag("MaviGül"))
         {
-           InteractPanel.SetActive(true);
-          
+            InteractPanel.SetActive(true);
+
+        }
+    }
+
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.gameObject.CompareTag("Mesale"))
+        {
+            LanternLight.Instance.isRefreshed = true;
         }
     }
 
@@ -40,14 +46,20 @@ public class Events : MonoBehaviour
             dialogCanvas.SetActive(false);
             //dialogManager.GetComponent<Dialog>().ResetDialog();
         }
-      
+
+
+        if (other.gameObject.CompareTag("Mesale"))
+        {
+            LanternLight.Instance.isRefreshed = false;
+        }
+
     }
 
     private void Update()
     {
-       
-        checkInputs();  
-       
+
+        checkInputs();
+
     }
 
     private void checkInputs()

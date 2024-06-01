@@ -1,17 +1,15 @@
 using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class LanternLight : MonoBehaviour
 {
 
-    //SIGLETON PATTERN
+
     // Static instance of the class.
     private static LanternLight _instance;
-    public string[] dialogtest;
- 
     // Public static property to access the instance.
+
+    //SIGLETON PATTERN
     public static LanternLight Instance
     {
         get
@@ -45,10 +43,10 @@ public class LanternLight : MonoBehaviour
             _instance = this;
             DontDestroyOnLoad(gameObject); // Make sure the instance is not destroyed on scene load.
         }
-       
 
 
-       
+
+
     }
 
 
@@ -60,15 +58,15 @@ public class LanternLight : MonoBehaviour
     //Scale will used in diffrent classes.
     public float lightScale;
     [SerializeField] private float lightTime;
-    
- 
+
+
 
 
     private void Start()
     {
 
-           //StartCoroutine(ligtMeter());
-           StartCoroutine(test());
+        //StartCoroutine(ligtMeter());
+        StartCoroutine(test());
 
     }
 
@@ -82,27 +80,37 @@ public class LanternLight : MonoBehaviour
 
     IEnumerator test()
     {
-        while(true)
+        while (true)
         {
             //Reset time & scale
             float duration = 0;
-            lightScale = 5;
+            lightScale = 10;
+
+            //Countdown 
             for (float i = lightTime; i > 0; i -= 0.1f)
-        {
-            yield return new WaitForSeconds(0.1f);
+            {
+                if (!isRefreshed)
+                {
+                    yield return new WaitForSeconds(0.1f);
 
-            lightScale -= 0.1f;
-            duration += 0.1f;
-                
-            isRemainingTimeFinished = true;
+                    lightScale -= 0.1f;
+                    duration += 0.1f;
 
-            Debug.Log("scale : " + lightScale + " duration : " + duration);
-        }
+                    isRemainingTimeFinished = true;
+
+                    Debug.Log("scale : " + lightScale + " duration : " + duration);
+                }
+                else
+                {
+                    break;
+                }
+
+            }
             //Debug.Log("for loop finished in : " + duration + "seconds " + " scale :  "+ lightScale);
-            yield return null;  
-        } 
+            yield return null;
+        }
     }
-    IEnumerator  ligtMeter()
+    IEnumerator ligtMeter()
     {
         while (true)
         {
@@ -154,10 +162,7 @@ public class LanternLight : MonoBehaviour
             yield return null;
         }
 
-         
+
     }
-
-
-
 
 }

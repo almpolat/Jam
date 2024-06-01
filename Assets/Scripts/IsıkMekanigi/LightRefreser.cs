@@ -1,15 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class LightRefreser : MonoBehaviour
 {
-
-    private void Start()
-    {
-      
-    }
-
 
     private void OnTriggerStay(Collider other)
     {

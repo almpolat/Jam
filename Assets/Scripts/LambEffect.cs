@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class LambEffect : MonoBehaviour
@@ -16,7 +15,7 @@ public class LambEffect : MonoBehaviour
         while (true)
         {
 
-        
+
             lamb.SetActive(false);
             lambSpot.SetActive(false);
 
@@ -28,9 +27,9 @@ public class LambEffect : MonoBehaviour
             yield return new WaitForSeconds(1);
         }
 
-       
-        
-       
+
+
+
     }
-         
+
 }
