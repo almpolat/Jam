@@ -3,92 +3,121 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using System;
-using UnityEditor;
 
 public class Dialog : MonoBehaviour
 {
-
     [Header("Dialog Settings")]
     public TextMeshProUGUI dialogText;
     public float textSpeed;
     public GameObject dialogCanvas;
 
-
-
-    [Header("Dialogs")]
-    public string[] firstDialog;
-    public string[] secondDialog;
-    public string[] thirdDialog;
-    public string[] fourthDialog;
-    public string[] fifthDialog;
-
-    private Queue<Array> dialogs = new Queue<Array>();
-    private string[] currentDialog;
+    private DialogData currentDialog;
     private int sentenceIndex;
 
-   
-    void Start()
+    // Singleton pattern
+    private static Dialog _instance;
+
+    public static Dialog Instance
     {
+        get
+        {
+            if (_instance == null)
+            {
+                _instance = FindObjectOfType<Dialog>();
 
-
-        dialogs.Enqueue(firstDialog);
-        dialogs.Enqueue(secondDialog);  
-        dialogs.Enqueue(thirdDialog);
-        dialogs.Enqueue(fourthDialog);
-        dialogs.Enqueue(fifthDialog);
-            
-
-
-        dialogText.text = string.Empty;
-
-        StartDialoge();
-
-        currentDialog = firstDialog;
+                if (_instance == null)
+                {
+                    GameObject singletonObject = new GameObject(typeof(Dialog).ToString());
+                    _instance = singletonObject.AddComponent<Dialog>();
+                }
+            }
+            return _instance;
+        }
     }
 
+    private void Awake()
+    {
+        if (_instance != null && _instance != this)
+        {
+            Destroy(gameObject);
+        }
+        else
+        {
+            _instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+    }
 
     void Update()
     {
-        //currentDialog = (string[])GetLastItem(dialogs);
-      
-        if (dialogs != null) { currentDialog = (string[])dialogs.Peek(); }
+        ContinueDialog();
+        CloseDialogWhenFinished();
 
-      
-        
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetKey(KeyCode.Space))
         {
-            if (dialogText.text == currentDialog[sentenceIndex])
+            LoadAndStartDialog("HomeDialog");
+        }
+    }
+
+    public void StartSpecificDialog(DialogData specificDialog)
+    {
+        dialogCanvas.SetActive(true);
+        StopAllCoroutines();
+        dialogText.text = string.Empty;
+        currentDialog = specificDialog;
+        sentenceIndex = 0;
+        StartCoroutine(TypeLine());
+    }
+
+    public void LoadAndStartDialog(string dialogName)
+    {
+        DialogData dialogData = Resources.Load<DialogData>("DialogData/" + dialogName);
+        if (dialogData != null)
+        {
+            StartSpecificDialog(dialogData);
+        }
+        else
+        {
+            Debug.LogError("DialogData not found: " + dialogName);
+        }
+    }
+
+    private void CloseDialogWhenFinished()
+    {
+        if (currentDialog != null && dialogText.text == currentDialog.dialogLines[currentDialog.dialogLines.Length - 1])
+        {
+            dialogCanvas.SetActive(false);
+            StopAllCoroutines();
+            dialogText.text = string.Empty;
+            currentDialog = null;
+            sentenceIndex = 0;
+        }
+    }
+
+    private void ContinueDialog()
+    {
+        if (Input.GetMouseButtonDown(0) && currentDialog != null)
+        {
+            if (dialogText.text == currentDialog.dialogLines[sentenceIndex])
             {
                 NextSentence();
             }
-
             else
             {
                 StopAllCoroutines();
-                dialogText.text = currentDialog[sentenceIndex];
-
+                dialogText.text = currentDialog.dialogLines[sentenceIndex];
             }
 
-            if(dialogText.text == currentDialog[currentDialog.Length-1]) 
+            if (dialogText.text == currentDialog.dialogLines[currentDialog.dialogLines.Length - 1])
             {
-                dialogs.Dequeue();
-               
-                currentDialog = secondDialog;
-                sentenceIndex = 0;  
+                sentenceIndex = 0;
             }
         }
     }
 
-    
-     void StartDialoge()
-    {
-        sentenceIndex = 0;
-        //StartCoroutine(TypeLine());
-    }
-
     IEnumerator TypeLine()
     {
-        foreach (char c in currentDialog[sentenceIndex].ToCharArray())
+        foreach (char c in currentDialog.dialogLines[sentenceIndex].ToCharArray())
         {
             dialogText.text += c;
             yield return new WaitForSeconds(textSpeed);
@@ -97,40 +126,15 @@ public class Dialog : MonoBehaviour
 
     void NextSentence()
     {
-        if (sentenceIndex < currentDialog.Length - 1)
+        if (sentenceIndex < currentDialog.dialogLines.Length - 1)
         {
-            //dialogCanvas.SetActive(true);
             sentenceIndex++;
             dialogText.text = string.Empty;
             StartCoroutine(TypeLine());
         }
         else
         {
-            gameObject.SetActive(false);
+            dialogText.text = string.Empty;
         }
-    }
-
-    public void ResetDialog()
-    {
-        sentenceIndex = 0;
-    }
-
-
-    static T GetLastItem<T>(Queue<T> queue)
-    {
-        if (queue.Count == 0)
-        {
-            throw new InvalidOperationException("Queue is empty.");
-        }
-
-        // Peek at the last item without removing it
-        T lastItem = default(T);
-        foreach (T item in queue)
-        {
-            lastItem = item;
-        }
-
-        return lastItem;
     }
 }
-

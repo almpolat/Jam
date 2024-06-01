@@ -37,7 +37,7 @@ public class Events : MonoBehaviour
         {
             InteractPanel.SetActive(false);
             dialogCanvas.SetActive(false);
-            dialogManager.GetComponent<Dialog>().ResetDialog();
+            //dialogManager.GetComponent<Dialog>().ResetDialog();
         }
     }
 
