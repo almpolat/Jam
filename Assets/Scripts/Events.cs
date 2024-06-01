@@ -28,6 +28,7 @@ public class Events : MonoBehaviour
         if (other.gameObject.CompareTag("Cin") || other.gameObject.CompareTag("Sevgili") || other.gameObject.CompareTag("MaviGül"))
         {
            InteractPanel.SetActive(true);
+          
         }
     }
 
@@ -39,11 +40,14 @@ public class Events : MonoBehaviour
             dialogCanvas.SetActive(false);
             //dialogManager.GetComponent<Dialog>().ResetDialog();
         }
+      
     }
 
     private void Update()
     {
+       
         checkInputs();  
+       
     }
 
     private void checkInputs()
