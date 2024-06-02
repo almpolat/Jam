@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b26e66a35e04bd48b12d168dd2a1510, type: 3}
+  m_Name: araba
+  m_EditorClassIdentifier: 
+  dialogLines:
+  - "Off ger\xE7ekten \xE7ok yorucu bir g\xFCnd\xFC. Ke\u015Fke eve gitti\u011Fimde
+    Mary orda olsayd\u0131."
+  - "Yolda ilk defa bu kadar bo\u015F. Hatta biraz \xFCrk\xFCt\xFCc\xFC."
+  - "AAA tesad\xFCfe bak Mary senden bahsettim ve \u015Fimdi mezarl\u0131\u011F\u0131n\u0131n
+    yan\u0131na gelmi\u015Fim."
+  - ...

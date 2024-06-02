@@ -1,6 +1,8 @@
 using System.Collections;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Dialog : MonoBehaviour
 {
@@ -54,6 +56,13 @@ public class Dialog : MonoBehaviour
         if (Input.GetKey(KeyCode.Space))
         {
             LoadAndStartDialog("HomeDialog");
+        }
+        void OnTriggerEnter(Collider other)
+        {
+            if (other.CompareTag("Car"))
+            {
+                LoadAndStartDialog("Araba");
+            }
         }
     }
 
