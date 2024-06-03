@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b26e66a35e04bd48b12d168dd2a1510, type: 3}
+  m_Name: Hayalet
+  m_EditorClassIdentifier: 
+  dialogLines:
+  - Merhaba Carl!
+  - "Kar\u0131n\u0131 geri getirmeye ne dersin Carl. Bunun i\xE7in sana yard\u0131m
+    edebilirim."
+  - "Fakat bunun i\xE7in sana verece\u011Fim g\xF6revleri yapman laz\u0131m. "
+  - "\u0130lk olarak bu mezarl\u0131\u011F\u0131n i\xE7indeki 3 sar\u0131 g\xFCl\xFC
+    bul ve topla."
+  - "Ard\u0131ndan o g\xFClleri mezarl\u0131\u011F\u0131n ba\u015F\u0131nda kulubenin
+    kar\u015F\u0131s\u0131ndaki i\u015Faretli yerlere ek."
+  - ....

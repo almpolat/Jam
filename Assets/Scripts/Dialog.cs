@@ -57,11 +57,24 @@ public class Dialog : MonoBehaviour
         {
             LoadAndStartDialog("HomeDialog");
         }
+
         void OnTriggerEnter(Collider other)
         {
             if (other.CompareTag("Car"))
             {
                 LoadAndStartDialog("Araba");
+            }
+            else if (other.CompareTag("Player"))
+            {
+                GameObject[] cinObjects = GameObject.FindGameObjectsWithTag("Cin");
+                foreach (GameObject cin in cinObjects)
+                {
+                    if (other.gameObject == cin)
+                    {
+                        LoadAndStartDialog("Hayalet");
+                        break;
+                    }
+                }
             }
         }
     }
