@@ -7,14 +7,9 @@ public class gültopla : MonoBehaviour
 {
     // Counter to keep track of triggers
     private static int gülcounter = 0;
-    public GameObject ektext;
+
     private void Start()
     {
-        // Oyun baþladýðýnda görev objesini inaktif hale getir
-        if (ektext != null)
-        {
-            ektext.SetActive(false);
-        }
     }
 
     // Reference to the TMP Text component, shared among all instances
@@ -97,7 +92,7 @@ public class gültopla : MonoBehaviour
             if (gülcounter == totalGülCount)
             {
                 gülcounterText.gameObject.SetActive(false);
-                ektext.SetActive(true);
+
             }
         }
     }
