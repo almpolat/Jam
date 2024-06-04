@@ -1,8 +1,6 @@
 using System.Collections;
 using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class Dialog : MonoBehaviour
 {
@@ -86,7 +84,11 @@ public class Dialog : MonoBehaviour
     {
         if (currentDialog != null && dialogText.text == currentDialog.dialogLines[currentDialog.dialogLines.Length - 1])
         {
-            dialogCanvas.SetActive(false);
+            if (dialogCanvas != null)
+            {
+                dialogCanvas.SetActive(false);
+            }
+
             StopAllCoroutines();
             dialogText.text = string.Empty;
             currentDialog = null;

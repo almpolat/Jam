@@ -1,7 +1,7 @@
 using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class gültopla : MonoBehaviour
 {
@@ -36,6 +36,17 @@ public class gültopla : MonoBehaviour
         }
     }
 
+
+    private void Update()
+    {
+        if (gülcounter == 1)
+        {
+            Dialog.Instance.LoadAndStartDialog("GülToplandý");
+
+            StartCoroutine(WaitForDialogFinish());
+            gülcounter = 0;
+        }
+    }
     private void OnTriggerEnter(Collider other)
     {
         // Check if the collider has the 'Player' tag
@@ -46,6 +57,16 @@ public class gültopla : MonoBehaviour
         }
     }
 
+
+
+    private IEnumerator WaitForDialogFinish()
+    {
+        //Waits to dialog finish
+        yield return new WaitForSeconds(3);
+
+        //Than go to Ev scene
+        SceneManager.LoadScene(2);
+    }
     private IEnumerator WaitForKeyPress()
     {
         // Wait until the 'E' key is pressed

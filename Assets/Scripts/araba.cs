@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class araba : MonoBehaviour
@@ -16,5 +14,13 @@ public class araba : MonoBehaviour
 
         // Move the car
         transform.Translate(moveDirection * speed * Time.deltaTime);
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("MezarlýkTrigger"))
+        {
+            Dialog.Instance.LoadAndStartDialog("araba");
+        }
     }
 }
