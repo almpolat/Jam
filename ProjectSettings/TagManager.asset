@@ -9,6 +9,16 @@ TagManager:
   - Cin
   - "MaviG\xFCl"
   - Mesale
+  - Car
+  - "G\xF6z"
+  - masalamba
+  - ellamba
+  - hayalet
+  - "sar\u0131g\xFCl"
+  - bul
+  - "g\xFCl"
+  - ek
+  - "g\xF6revler"
   layers:
   - Default
   - TransparentFX
@@ -17,7 +27,7 @@ TagManager:
   - Water
   - UI
   - postprocess
-  - 
+  - postprocess2
   - 
   - 
   - 
