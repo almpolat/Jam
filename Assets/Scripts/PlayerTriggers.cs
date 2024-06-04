@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerTriggers : MonoBehaviour
 {
@@ -9,6 +10,8 @@ public class PlayerTriggers : MonoBehaviour
 
 
     [SerializeField] GameObject InteractPanel;
+    [SerializeField] GameObject GotoHomePanel;
+    [SerializeField] GameObject MesaleInteract;
 
     private void Start()
     {
@@ -28,6 +31,18 @@ public class PlayerTriggers : MonoBehaviour
             InteractPanel.SetActive(true);
 
         }
+
+        if (other.gameObject.CompareTag("CarMezarlýk"))
+        {
+            GotoHomePanel.SetActive(true);
+
+        }
+
+        if (other.gameObject.CompareTag("Mesale"))
+        {
+            MesaleInteract.SetActive(true);
+
+        }
     }
 
     private void OnTriggerStay(Collider other)
@@ -35,6 +50,7 @@ public class PlayerTriggers : MonoBehaviour
         if (other.gameObject.CompareTag("Mesale"))
         {
             LanternLight.Instance.isRefreshed = true;
+
         }
     }
 
@@ -51,6 +67,19 @@ public class PlayerTriggers : MonoBehaviour
         if (other.gameObject.CompareTag("Mesale"))
         {
             LanternLight.Instance.isRefreshed = false;
+        }
+
+        if (other.gameObject.CompareTag("CarMezarlýk"))
+        {
+            GotoHomePanel.SetActive(false);
+
+        }
+
+
+        if (other.gameObject.CompareTag("Mesale"))
+        {
+            MesaleInteract.SetActive(false);
+
         }
 
     }
@@ -70,6 +99,17 @@ public class PlayerTriggers : MonoBehaviour
             {
                 dialogCanvas.SetActive(true);
                 InteractPanel.SetActive(false);
+            }
+        }
+
+        if (GotoHomePanel != null && GotoHomePanel.activeInHierarchy)
+        {
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+
+                GotoHomePanel.SetActive(false);
+                SceneManager.LoadScene(2);
+
             }
         }
     }

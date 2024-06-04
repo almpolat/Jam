@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class masalambası : MonoBehaviour
@@ -22,6 +20,10 @@ public class masalambası : MonoBehaviour
         {
             // masalamba tagına sahip objeyi bul
             GameObject masalamba = GameObject.FindGameObjectWithTag("masalamba");
+
+
+            LanternLight.Instance.isLanternActive = true;
+
 
             // masalamba objesi varsa ve aktifse, inaktif hale getir
             if (masalamba != null && masalamba.activeSelf)

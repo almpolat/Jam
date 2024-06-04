@@ -55,6 +55,9 @@ public class LanternLight : MonoBehaviour
     [SerializeField] public bool isRefreshed;
     [SerializeField] private int offsetTime;
 
+    [SerializeField] private GameObject Lantern;
+    public bool isLanternActive;
+
     //Scale will used in diffrent classes.
     public float lightScale;
     [SerializeField] private float lightTime;
@@ -66,15 +69,17 @@ public class LanternLight : MonoBehaviour
     {
 
         //StartCoroutine(ligtMeter());
-        StartCoroutine(test());
 
+        isLanternActive = false;
     }
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.B))
+        if (Lantern.activeInHierarchy && isLanternActive)
         {
-            Dialog.Instance.LoadAndStartDialog("mezarlikDialog");
+            StartCoroutine(test());
+
+
         }
     }
 
@@ -82,6 +87,7 @@ public class LanternLight : MonoBehaviour
     {
         while (true)
         {
+            isLanternActive = false;
             //Reset time & scale
             float duration = 0;
             lightScale = 10;

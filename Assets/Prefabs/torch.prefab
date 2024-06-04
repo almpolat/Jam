@@ -173,16 +173,49 @@ PrefabInstance:
       propertyPath: m_Name
       value: torch
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 6398a93302aea3c4789e75a00255758d, type: 3}
+      propertyPath: m_TagString
+      value: Mesale
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 6398a93302aea3c4789e75a00255758d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1196865008123077169}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 6398a93302aea3c4789e75a00255758d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2346821900765521994}
   m_SourcePrefab: {fileID: 100100000, guid: 6398a93302aea3c4789e75a00255758d, type: 3}
 --- !u!4 &8405947914687548355 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 6398a93302aea3c4789e75a00255758d, type: 3}
   m_PrefabInstance: {fileID: 8299382502588312616}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &9217810414544572793 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 6398a93302aea3c4789e75a00255758d, type: 3}
+  m_PrefabInstance: {fileID: 8299382502588312616}
+  m_PrefabAsset: {fileID: 0}
+--- !u!135 &2346821900765521994
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9217810414544572793}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.1
+  m_Center: {x: 0, y: 0.05, z: 0.0033904938}
