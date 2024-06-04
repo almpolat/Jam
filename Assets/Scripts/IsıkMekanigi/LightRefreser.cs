@@ -7,7 +7,11 @@ public class LightRefreser : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            LanternLight.Instance.isRefreshed = true;
+            if (Input.GetKeyDown(KeyCode.F))
+            {
+                LanternLight.Instance.isRefreshed = true;
+            }
+
         }
     }
 

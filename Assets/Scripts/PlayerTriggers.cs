@@ -7,16 +7,63 @@ public class PlayerTriggers : MonoBehaviour
     public GameObject MaviGül;
     public GameObject dialogCanvas;
     public GameObject dialogManager;
+    public bool isJumpscareCrossed;
 
 
     [SerializeField] GameObject InteractPanel;
     [SerializeField] GameObject GotoHomePanel;
     [SerializeField] GameObject MesaleInteract;
 
+
+    // Static instance of the class.
+    private static PlayerTriggers _instance;
+    // Public static property to access the instance.
+
+    //SIGLETON PATTERN
+    public static PlayerTriggers Instance
+    {
+        get
+        {
+            if (_instance == null)
+            {
+                // Find an existing instance of the singleton in the scene.
+                _instance = FindObjectOfType<PlayerTriggers>();
+
+                if (_instance == null)
+                {
+                    // Create a new GameObject if an instance does not already exist.
+                    GameObject singletonObject = new GameObject(typeof(LanternLight).ToString());
+                    _instance = singletonObject.AddComponent<PlayerTriggers>();
+                }
+            }
+            return _instance;
+        }
+    }
+
+    // Awake is called when the script instance is being loaded.
+    private void Awake()
+    {
+        // If an instance already exists and it's not this one, destroy the new instance.
+        if (_instance != null && _instance != this)
+        {
+            Destroy(gameObject);
+        }
+        else
+        {
+            _instance = this;
+            DontDestroyOnLoad(gameObject); // Make sure the instance is not destroyed on scene load.
+        }
+
+
+
+
+    }
+
+
     private void Start()
     {
         //  EvGameManager.Instance.onSleep += Sleep;
-
+        isJumpscareCrossed = false;
     }
 
     private void Sleep()
@@ -41,6 +88,12 @@ public class PlayerTriggers : MonoBehaviour
         if (other.gameObject.CompareTag("Mesale"))
         {
             MesaleInteract.SetActive(true);
+
+        }
+
+        if (other.gameObject.CompareTag("Jumpscare"))
+        {
+            isJumpscareCrossed = true;
 
         }
     }
@@ -108,6 +161,7 @@ public class PlayerTriggers : MonoBehaviour
             {
 
                 GotoHomePanel.SetActive(false);
+                AudioManager.Instance.playAudioCar();
                 SceneManager.LoadScene(2);
 
             }

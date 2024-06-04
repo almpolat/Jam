@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -11,14 +9,18 @@ public class UImanager : MonoBehaviour
 
     public void SetActivePause(bool state)
     {
-        PauseCanvas.SetActive(state);
+        if (PauseCanvas != null)
+        {
+            PauseCanvas.SetActive(state);
+
+        }
         Time.timeScale = state ? 0 : 1;
         isPaused = state;
         Cursor.visible = state;
         Cursor.lockState = state ? CursorLockMode.None : CursorLockMode.Locked;
         if (fpsController != null)
         {
-            fpsController.isPaused = state; 
+            fpsController.isPaused = state;
         }
     }
 
