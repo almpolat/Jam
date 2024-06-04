@@ -11,6 +11,8 @@ public class PlayerTriggers : MonoBehaviour
 
 
     [SerializeField] GameObject InteractPanel;
+    [SerializeField] GameObject speakPanel;
+    [SerializeField] GameObject speakSevgili;
     [SerializeField] GameObject GotoHomePanel;
     [SerializeField] GameObject MesaleInteract;
 
@@ -66,16 +68,17 @@ public class PlayerTriggers : MonoBehaviour
         isJumpscareCrossed = false;
     }
 
-    private void Sleep()
-    {
-
-    }
-
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Cin") || other.gameObject.CompareTag("Sevgili") || other.gameObject.CompareTag("MaviGül"))
+        if (other.gameObject.CompareTag("Cin"))
         {
-            InteractPanel.SetActive(true);
+            speakPanel.SetActive(true);
+
+        }
+
+        if (other.gameObject.CompareTag("Sevgili"))
+        {
+            speakSevgili.SetActive(true);
 
         }
 
@@ -109,11 +112,16 @@ public class PlayerTriggers : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.CompareTag("Cin") || other.gameObject.CompareTag("Sevgili") || other.gameObject.CompareTag("MaviGül"))
+
+        if (other.gameObject.CompareTag("Cin"))
         {
-            InteractPanel.SetActive(false);
-            dialogCanvas.SetActive(false);
-            //dialogManager.GetComponent<Dialog>().ResetDialog();
+            speakPanel.SetActive(false);
+
+        }
+        if (other.gameObject.CompareTag("Sevgili"))
+        {
+            speakSevgili.SetActive(false);
+
         }
 
 
@@ -163,6 +171,27 @@ public class PlayerTriggers : MonoBehaviour
                 GotoHomePanel.SetActive(false);
                 AudioManager.Instance.playAudioCar();
                 SceneManager.LoadScene(2);
+
+            }
+        }
+
+        if (speakPanel != null && speakPanel.activeInHierarchy)
+        {
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+
+                Dialog.Instance.LoadAndStartDialog("Cin");
+
+            }
+        }
+
+
+        if (speakSevgili != null && speakSevgili.activeInHierarchy)
+        {
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+
+                Dialog.Instance.LoadAndStartDialog("Sevgili");
 
             }
         }

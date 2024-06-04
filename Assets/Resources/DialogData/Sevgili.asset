@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5b26e66a35e04bd48b12d168dd2a1510, type: 3}
-  m_Name: Cin
+  m_Name: Sevgili
   m_EditorClassIdentifier: 
   dialogLines:
-  - Cin
-  - 'Ci adsa dad  sad '
-  - 'ds ads asd rgge ge '
-  - 'ds ads asd rgge ge '
+  - Sevgili
+  - dsa a
+  - asd a
+  - Sevgili
