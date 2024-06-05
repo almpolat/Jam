@@ -13,7 +13,7 @@ public class RuyaIlkManager : MonoBehaviour
     {
         if (Dialog.Instance.IsDialogFinished)
         {
-            SceneManager.LoadScene("EvIlk");
+            SceneManager.LoadScene("EvIlkAfterRuya");
         }
     }
 

@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5b26e66a35e04bd48b12d168dd2a1510, type: 3}
-  m_Name: ruyaSiyah
+  m_Name: "mezarl\u0131kIlk"
   m_EditorClassIdentifier: 
   dialogLines:
-  - "Mezarl\u0131kkk"
-  - "Mezarl\u0131ga geeeeell"
-  - "Mezarl\u0131ga geeeeell"
-  - "Mezarl\u0131ga geeeeell"
+  - "Ger\xE7ekten kendime inanam\u0131yorum. Gecenin bu saati buraya geldim."
+  - "Ve sadece bir hal\xFCsilasyon i\xE7in"
+  - "Kahretsin yan\u0131ma fener almay\u0131 unutmusum"
+  - "Surdaki kulubeye bak\u0131y\u0131m belkii i\u015Fe yarar bir sey vard\u0131r"
