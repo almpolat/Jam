@@ -2054,6 +2054,10 @@ PrefabInstance:
       propertyPath: PauseCanvas
       value: 
       objectReference: {fileID: 2090538376}
+    - target: {fileID: 1250128174806354117, guid: 4c840ebfc0e2a3042800efdf11349b8d, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 5683199202947044033, guid: 4c840ebfc0e2a3042800efdf11349b8d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 703.1727
