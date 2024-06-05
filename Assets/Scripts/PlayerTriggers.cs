@@ -50,12 +50,6 @@ public class PlayerTriggers : MonoBehaviour
         {
             Destroy(gameObject);
         }
-        else
-        {
-            _instance = this;
-            DontDestroyOnLoad(gameObject); // Make sure the instance is not destroyed on scene load.
-        }
-
 
 
 
