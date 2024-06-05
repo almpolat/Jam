@@ -15,6 +15,7 @@ public class PlayerTriggers : MonoBehaviour
     [SerializeField] GameObject speakSevgili;
     [SerializeField] GameObject GotoHomePanel;
     [SerializeField] GameObject MesaleInteract;
+    [SerializeField] GameObject mezarlýgaGitInteract;
 
 
     // Static instance of the class.
@@ -93,6 +94,13 @@ public class PlayerTriggers : MonoBehaviour
             isJumpscareCrossed = true;
 
         }
+
+
+        if (other.gameObject.CompareTag("EvKapý"))
+        {
+            mezarlýgaGitInteract.SetActive(true);
+
+        }
     }
 
     private void OnTriggerStay(Collider other)
@@ -134,6 +142,12 @@ public class PlayerTriggers : MonoBehaviour
         if (other.gameObject.CompareTag("Mesale"))
         {
             MesaleInteract.SetActive(false);
+
+        }
+
+        if (other.gameObject.CompareTag("EvKapý"))
+        {
+            mezarlýgaGitInteract.SetActive(false);
 
         }
 
@@ -186,6 +200,16 @@ public class PlayerTriggers : MonoBehaviour
             {
 
                 Dialog.Instance.LoadAndStartDialog("Sevgili");
+
+            }
+        }
+
+        if (mezarlýgaGitInteract != null && mezarlýgaGitInteract.activeInHierarchy)
+        {
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+
+                SceneManager.LoadScene(4);
 
             }
         }

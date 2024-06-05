@@ -1,16 +1,18 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 
 public class rüyayageçiş : MonoBehaviour
 {
     private bool playerInTrigger = false;
     [SerializeField] GameObject sleepInteract;
-    [SerializeField] GameObject ruyaCanvas;
+
 
     // Bu fonksiyon tetikleme alanına bir obje girdiğinde çağrılır
     private void OnTriggerEnter(Collider other)
     {
         // Eğer tetikleyen obje "Player" tagine sahipse
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Player") && sleepInteract != null)
         {
             playerInTrigger = true;
             sleepInteract.SetActive(true);
@@ -22,7 +24,7 @@ public class rüyayageçiş : MonoBehaviour
     private void OnTriggerExit(Collider other)
     {
         // Eğer tetikleyen obje "Player" tagine sahipse
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Player") && sleepInteract != null)
         {
             playerInTrigger = false;
             sleepInteract.SetActive(false);
@@ -35,13 +37,9 @@ public class rüyayageçiş : MonoBehaviour
         if (playerInTrigger && Input.GetKeyDown(KeyCode.E))
         {
             Dialog.Instance.LoadAndStartDialog("ruyaSiyah");
-            ruyaCanvas.SetActive(true);
+            SceneManager.LoadScene("RuyaSiyah");
+
         }
 
-        if (Dialog.Instance.IsDialogFinished)
-        {
-
-            ruyaCanvas.SetActive(false);
-        }
     }
 }

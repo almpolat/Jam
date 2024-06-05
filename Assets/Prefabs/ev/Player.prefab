@@ -808,12 +808,12 @@ GameObject:
   - component: {fileID: 5683199202947044033}
   - component: {fileID: 4350018443244670989}
   - component: {fileID: 3721579289274310410}
+  - component: {fileID: 8814049771492673354}
   - component: {fileID: 1927664517727937671}
+  - component: {fileID: 1250128174806354117}
   - component: {fileID: 8634233466825849192}
   - component: {fileID: 1165814223776774914}
-  - component: {fileID: 8814049771492673354}
   - component: {fileID: 23193606787439253}
-  - component: {fileID: 1250128174806354117}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -890,6 +890,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &8814049771492673354
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6382020309509851107}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5cb2eacbef50fa4bbc219be2941d5ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  "MaviG\xFCl": {fileID: 0}
+  dialogCanvas: {fileID: 0}
+  dialogManager: {fileID: 0}
+  isJumpscareCrossed: 0
+  InteractPanel: {fileID: 1740531046326075552}
+  speakPanel: {fileID: 0}
+  speakSevgili: {fileID: 0}
+  GotoHomePanel: {fileID: 0}
+  MesaleInteract: {fileID: 0}
 --- !u!114 &1927664517727937671
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -906,83 +927,6 @@ MonoBehaviour:
   mouseSensitivity: 2
   isPaused: 0
   walkAudioSource: {fileID: 1250128174806354117}
---- !u!143 &8634233466825849192
-CharacterController:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6382020309509851107}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Height: 2
-  m_Radius: 0.5
-  m_SlopeLimit: 45
-  m_StepOffset: 0.3
-  m_SkinWidth: 0.08
-  m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!65 &1165814223776774914
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6382020309509851107}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 2, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &8814049771492673354
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6382020309509851107}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d5cb2eacbef50fa4bbc219be2941d5ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  "MaviG\xFCl": {fileID: 0}
-  dialogCanvas: {fileID: 0}
-  dialogManager: {fileID: 0}
-  InteractPanel: {fileID: 1740531046326075552}
---- !u!114 &23193606787439253
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6382020309509851107}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a9e1f7c8b5b3d0348b0abff7eac9bbe6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PauseCanvas: {fileID: 0}
-  fpsController: {fileID: 1927664517727937671}
 --- !u!82 &1250128174806354117
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1079,6 +1023,67 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!143 &8634233466825849192
+CharacterController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6382020309509851107}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Height: 2
+  m_Radius: 0.5
+  m_SlopeLimit: 45
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!65 &1165814223776774914
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6382020309509851107}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 2, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &23193606787439253
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6382020309509851107}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9e1f7c8b5b3d0348b0abff7eac9bbe6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PauseCanvas: {fileID: 0}
+  fpsController: {fileID: 1927664517727937671}
 --- !u!1 &7427807102881832327
 GameObject:
   m_ObjectHideFlags: 0
