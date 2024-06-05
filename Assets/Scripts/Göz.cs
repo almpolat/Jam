@@ -22,5 +22,14 @@ public class Göz : MonoBehaviour
             imageAnimator.SetTrigger("close");
             image1Animator.SetTrigger("close");
         }
+        if (other.CompareTag("Player"))
+        {
+            // 'Göz' etiketine sahip Canvas'i etkinleştir
+            eyeCanvas.SetActive(true);
+
+            // 'Image' ve 'Image1' objelerinin animasyonlarını başlat
+            imageAnimator.SetTrigger("close");
+            image1Animator.SetTrigger("close");
+        }
     }
 }

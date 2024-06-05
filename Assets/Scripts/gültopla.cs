@@ -8,9 +8,6 @@ public class gültopla : MonoBehaviour
     // Counter to keep track of triggers
     private static int gülcounter = 0;
 
-    private void Start()
-    {
-    }
 
     // Reference to the TMP Text component, shared among all instances
     private static TextMeshProUGUI gülcounterText;
@@ -19,7 +16,7 @@ public class gültopla : MonoBehaviour
     public TextMeshProUGUI textComponent;
 
     // Total number of gül objects
-    private static int totalGülCount = 3;
+    private static int totalGülCount = 5;
 
     private void Awake()
     {
@@ -31,17 +28,6 @@ public class gültopla : MonoBehaviour
         }
     }
 
-
-    private void Update()
-    {
-        if (gülcounter == 1)
-        {
-            Dialog.Instance.LoadAndStartDialog("GülToplandý");
-
-            StartCoroutine(WaitForDialogFinish());
-            gülcounter = 0;
-        }
-    }
     private void OnTriggerEnter(Collider other)
     {
         // Check if the collider has the 'Player' tag
@@ -52,16 +38,6 @@ public class gültopla : MonoBehaviour
         }
     }
 
-
-
-    private IEnumerator WaitForDialogFinish()
-    {
-        //Waits to dialog finish
-        yield return new WaitForSeconds(3);
-
-        //Than go to Ev scene
-        SceneManager.LoadScene(2);
-    }
     private IEnumerator WaitForKeyPress()
     {
         // Wait until the 'E' key is pressed
@@ -92,7 +68,6 @@ public class gültopla : MonoBehaviour
             if (gülcounter == totalGülCount)
             {
                 gülcounterText.gameObject.SetActive(false);
-
             }
         }
     }

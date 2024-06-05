@@ -13,7 +13,14 @@ MonoBehaviour:
   m_Name: Cin
   m_EditorClassIdentifier: 
   dialogLines:
-  - Cin
-  - 'Ci adsa dad  sad '
-  - 'ds ads asd rgge ge '
-  - 'ds ads asd rgge ge '
+  - "?: Kar\u0131n\u0131 kurtarmak ister misin Carl!"
+  - 'Carl: Tabi ki isterim!'
+  - "?: Bunun i\xE7in sana verece\u011Fim g\xF6revleri yapman yeterli."
+  - "Carl: Ne olursa olsun yapmaya haz\u0131r\u0131m."
+  - "?: \u0130lk g\xF6revin mezarl\u0131\u011F\u0131n belirli yerlerinde olan 5 sar\u0131
+    g\xFCl\xFC toplamak."
+  - "?: \u0130kinci g\xF6revin bu 5 tane sar\u0131 g\xFCl\xFC ekeceksin."
+  - "?: Son g\xF6revin, kar\u0131n\u0131n mezar\u0131n\u0131n ba\u015F\u0131nda verece\u011Fim
+    duay\u0131 okumak olacak."
+  - "Carl: Sadece bu kadar m\u0131."
+  - "?l: Evet \u015Fimdi g\xF6revlerine ba\u015Fla!!!!"
