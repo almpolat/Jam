@@ -12,6 +12,7 @@ public class Dialog : MonoBehaviour
     private DialogData currentDialog;
     private int sentenceIndex;
 
+    public bool IsDialogFinished;
     // Singleton pattern
     private static Dialog _instance;
 
@@ -65,6 +66,7 @@ public class Dialog : MonoBehaviour
         currentDialog = specificDialog;
         sentenceIndex = 0;
         StartCoroutine(TypeLine());
+        Debug.Log("Dialog Started");
     }
 
     public void LoadAndStartDialog(string dialogName)
@@ -72,6 +74,7 @@ public class Dialog : MonoBehaviour
         DialogData dialogData = Resources.Load<DialogData>("DialogData/" + dialogName);
         if (dialogData != null)
         {
+            IsDialogFinished = false;
             StartSpecificDialog(dialogData);
         }
         else
@@ -93,6 +96,9 @@ public class Dialog : MonoBehaviour
             dialogText.text = string.Empty;
             currentDialog = null;
             sentenceIndex = 0;
+
+            IsDialogFinished = true;
+            Debug.Log("Dialog Finished");
         }
     }
 

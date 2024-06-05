@@ -10,12 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5b26e66a35e04bd48b12d168dd2a1510, type: 3}
-  m_Name: HomeDialog
+  m_Name: "EvIlkVar\u0131s"
   m_EditorClassIdentifier: 
   dialogLines:
-  - 'ev dialog
-
-'
-  - '2  22 2  '
-  - '4  4 4 4 4 '
-  - 5  55  5 5
+  - "Mezrl\u0131kta g\xF6rd\xFCg\xFCm o \u015Fey bi hal\xFCsilasyon olmal\u0131!"
+  - "Galiba fazla \xE7al\u0131\u015Fmaktan kafay\u0131 yemeye ba\u015Flad\u0131m."
+  - "En iyisi  yat\u0131p uyumak."
+  - "En iyisi  yat\u0131p uyumak."

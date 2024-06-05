@@ -1,11 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class rüyayageçiş : MonoBehaviour
 {
     private bool playerInTrigger = false;
+    [SerializeField] GameObject sleepInteract;
+    [SerializeField] GameObject ruyaCanvas;
 
     // Bu fonksiyon tetikleme alanına bir obje girdiğinde çağrılır
     private void OnTriggerEnter(Collider other)
@@ -14,6 +13,8 @@ public class rüyayageçiş : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             playerInTrigger = true;
+            sleepInteract.SetActive(true);
+
         }
     }
 
@@ -24,6 +25,7 @@ public class rüyayageçiş : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             playerInTrigger = false;
+            sleepInteract.SetActive(false);
         }
     }
 
@@ -32,8 +34,14 @@ public class rüyayageçiş : MonoBehaviour
         // Eğer "Player" tetikleme alanında ve "E" tuşuna basıldıysa
         if (playerInTrigger && Input.GetKeyDown(KeyCode.E))
         {
-            // Sahne 3'ü yükle
-            SceneManager.LoadScene(3);
+            Dialog.Instance.LoadAndStartDialog("ruyaSiyah");
+            ruyaCanvas.SetActive(true);
+        }
+
+        if (Dialog.Instance.IsDialogFinished)
+        {
+
+            ruyaCanvas.SetActive(false);
         }
     }
 }

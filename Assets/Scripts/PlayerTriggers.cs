@@ -152,7 +152,7 @@ public class PlayerTriggers : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
-                dialogCanvas.SetActive(true);
+
                 InteractPanel.SetActive(false);
             }
         }

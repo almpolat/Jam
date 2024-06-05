@@ -6394,27 +6394,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1324615779820135336
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3782384613719584432}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d5cb2eacbef50fa4bbc219be2941d5ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  "MaviG\xFCl": {fileID: 0}
-  dialogCanvas: {fileID: 0}
-  dialogManager: {fileID: 0}
-  isJumpscareCrossed: 0
-  InteractPanel: {fileID: 0}
-  speakPanel: {fileID: 0}
-  speakSevgili: {fileID: 0}
-  GotoHomePanel: {fileID: 0}
-  MesaleInteract: {fileID: 0}
 --- !u!4 &1342610415691060173
 Transform:
   m_ObjectHideFlags: 0
@@ -8387,7 +8366,6 @@ GameObject:
   - component: {fileID: 499825029174913290}
   - component: {fileID: 2426612212413764064}
   - component: {fileID: 3797445333625639505}
-  - component: {fileID: 1324615779820135336}
   m_Layer: 0
   m_Name: araba (1)
   m_TagString: Car
