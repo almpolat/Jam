@@ -23,4 +23,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/RuyaTablo.unity
     guid: abd787977b2467b49a98dfdb412acbdd
+  - enabled: 1
+    path: "Assets/Scenes/Mezarl\u0131kIki.unity"
+    guid: 6882571990730fe44b77097dd67a2eba
   m_configObjects: {}
