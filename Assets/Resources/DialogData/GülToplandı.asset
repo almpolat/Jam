@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: "G\xFClTopland\u0131"
   m_EditorClassIdentifier: 
   dialogLines:
-  - 'pheeew...
-
-'
   - "Gecenin bi vakti ne yap\u0131yorum bu mezarl\u0131g\u0131n ortas\u0131nda "
   - "Galiba kulland\u0131g\u0131m ila\xE7lar hal\xFCsilasyonlar g\xF6rmeme neden
     oluyor "
-  - "Eve gidip kendime gelmem laz\u0131m..."
-  - "Eve gidip kendime gelmem laz\u0131m..."
+  - "Ya da ger\xE7ekten Mary'i \xE7ok \xF6zledi\u011Fim i\xE7in b\xF6yle halis\xFClasyonlar
+    g\xF6rd\xFCm."
+  - "Neyse eve gidip kendime gelmem laz\u0131m. Araba kap\u0131n\u0131n \xF6n\xFCndeydi
+    zaten direkt. Atlar giderim hemen..."
+  - ...
