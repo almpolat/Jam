@@ -74,7 +74,7 @@ public class PlayerTriggers : MonoBehaviour
 
         }
 
-        if (other.gameObject.CompareTag("Sevgili") && ekme.totalekmeCount == 5)
+        if (other.gameObject.CompareTag("Sevgili") && ekme.ekmecounter == 5)
         {
             speakSevgili.SetActive(true);
 

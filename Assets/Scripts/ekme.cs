@@ -4,13 +4,13 @@ using UnityEngine;
 public class ekme : MonoBehaviour
 {
     // Counter to keep track of triggers
-    private static int ekmecounter = 0;
+    public static int ekmecounter = 0;
 
     // Reference to the TMP Text component, assigned in the inspector
     public TextMeshProUGUI textComponent;
 
     // Total number of gül objects
-    public static int totalekmeCount = 5;
+    private static int totalekmeCount = 5;
 
     // Game objects to activate/deactivate based on ekmecounter value
     public GameObject sarýGülObjesi;
