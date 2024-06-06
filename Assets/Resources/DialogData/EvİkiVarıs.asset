@@ -10,6 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5b26e66a35e04bd48b12d168dd2a1510, type: 3}
-  m_Name: NewDialog
+  m_Name: "Ev\u0130kiVar\u0131s"
   m_EditorClassIdentifier: 
-  dialogLines: []
+  dialogLines:
+  - "Ger\xE7ekten bug\xFCn yapt\u0131klar\u0131ma inanam\u0131yorum."
+  - "Galiba kafay\u0131 yiyorum. Marry'nin \xF6l\xFCm\xFC beni sarsm\u0131\u015F
+    olmal\u0131. Neyse yat\u0131p uyuyay\u0131m."
+  - ....
