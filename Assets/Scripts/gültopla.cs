@@ -7,6 +7,8 @@ public class gültopla : MonoBehaviour
 {
     // Counter to keep track of triggers
     private static int gülcounter = 0;
+    public GameObject Hideprefab;
+    public GameObject Activeprefab;
 
 
     // Reference to the TMP Text component, shared among all instances
@@ -68,6 +70,8 @@ public class gültopla : MonoBehaviour
             if (gülcounter == totalGülCount)
             {
                 gülcounterText.gameObject.SetActive(false);
+                Activeprefab.SetActive(true);
+                Hideprefab.SetActive(false);
             }
         }
     }
