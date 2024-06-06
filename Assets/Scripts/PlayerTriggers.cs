@@ -125,6 +125,12 @@ public class PlayerTriggers : MonoBehaviour
             LanternLight.Instance.isRefreshed = true;
 
         }
+
+        if (other.gameObject.CompareTag("OzelMesale"))
+        {
+            LanternLight.Instance.isRefreshed = true;
+
+        }
     }
 
     private void OnTriggerExit(Collider other)
@@ -147,6 +153,12 @@ public class PlayerTriggers : MonoBehaviour
             LanternLight.Instance.isRefreshed = false;
         }
 
+        if (other.gameObject.CompareTag("OzelMesale"))
+        {
+            LanternLight.Instance.isRefreshed = false;
+        }
+
+
         if (other.gameObject.CompareTag("CarMezarlýk"))
         {
             GotoHomePanel.SetActive(false);
@@ -159,6 +171,8 @@ public class PlayerTriggers : MonoBehaviour
             MesaleInteract.SetActive(false);
 
         }
+
+
 
 
         if (other.gameObject.CompareTag("Jumpscare"))
@@ -237,7 +251,7 @@ public class PlayerTriggers : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.E))
             {
 
-                SceneManager.LoadScene(4);
+                SceneManager.LoadScene("MezarlýkIlk");
 
             }
         }

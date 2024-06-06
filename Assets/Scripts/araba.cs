@@ -10,7 +10,7 @@ public class araba : MonoBehaviour
         float verticalInput = Input.GetAxis("Vertical");
 
         // Calculate movement direction
-        Vector3 moveDirection = new Vector3(0f, 0f, verticalInput).normalized;
+        Vector3 moveDirection = new Vector3(0f, 0f, 1f).normalized;
 
         // Move the car
         transform.Translate(moveDirection * speed * Time.deltaTime);

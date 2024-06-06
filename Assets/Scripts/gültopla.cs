@@ -21,14 +21,22 @@ public class gültopla : MonoBehaviour
     // Total number of gül objects
     private static int totalGülCount = 5;
 
-    private void Awake()
+
+    private void Start()
     {
+        gülcounter = 0;
+
+
         // Assign the TMP Text component if it's not already assigned
         if (gülcounterText == null && textComponent != null)
         {
             gülcounterText = textComponent;
             UpdateGülcounterText(); // Initialize the TMP text with the starting value
         }
+    }
+    private void Awake()
+    {
+
     }
 
     private void OnTriggerEnter(Collider other)
@@ -54,7 +62,7 @@ public class gültopla : MonoBehaviour
 
         // Increment the counter
         gülcounter++;
-        Debug.Log("Gülcounter: " + gülcounter);
+        Debug.Log("Cicekcounter: " + gülcounter);
 
         // Update the TMP Text content
         UpdateGülcounterText();
@@ -65,7 +73,7 @@ public class gültopla : MonoBehaviour
         // Update the TMP text to show the current counter value
         if (gülcounterText != null)
         {
-            gülcounterText.text = gülcounter + "/" + totalGülCount + " toplanan gül";
+            gülcounterText.text = gülcounter + "/" + totalGülCount + " toplanan cicek";
 
             // Hide the TMP text if gülcounter equals totalGülCount
             if (gülcounter == totalGülCount)
