@@ -5644,6 +5644,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pause
       objectReference: {fileID: 0}
+    - target: {fileID: 6236972982526495733, guid: 86ffd4f4615e90049b3a4087a67160fd, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8075366694091540869, guid: 86ffd4f4615e90049b3a4087a67160fd, type: 3}
       propertyPath: m_LocalPosition.x
       value: 960
@@ -6933,7 +6937,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69808605be9dbbc4bb46105bf198906d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 50
+  speed: 75
 --- !u!23 &2463350071973788459
 MeshRenderer:
   m_ObjectHideFlags: 0

@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Araba.unity
     guid: 8c7e400a5b22dbc4cbde6dfaf2467127
   - enabled: 1
+    path: "Assets/Scenes/EvIk\u0131nc\u0131r\xFCyafter.unity"
+    guid: f4584b17ac5307f478b174f56d3c8136
+  - enabled: 1
     path: Assets/Scenes/EvIlk.unity
     guid: e58ace0c3828af74cabb89dc64cbacc9
   - enabled: 1

@@ -43,7 +43,7 @@ public class gerçeğegeçiş : MonoBehaviour
             }
 
             // Yeni sahneye geç
-            SceneManager.LoadScene(5);
+            SceneManager.LoadScene("Evıkıncırüyafter");
         }
     }
 }

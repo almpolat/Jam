@@ -108,7 +108,7 @@ public class LanternLight : MonoBehaviour
                 }
                 else if (isRefreshed)
                 {
-                    lightScale = 15;
+                    lightScale = 25;
                 }
 
             }

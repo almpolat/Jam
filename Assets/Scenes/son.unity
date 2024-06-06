@@ -8682,7 +8682,7 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: 4e9a0dff480bf8f42b15c6c24f83c0f6, type: 3}
     - target: {fileID: 4601260369884738304, guid: 72729343a8b1d8e43824588dfdeb5c20, type: 3}
       propertyPath: movementSpeed
-      value: 30
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4788448220890927338, guid: 72729343a8b1d8e43824588dfdeb5c20, type: 3}
       propertyPath: m_LocalScale.y
@@ -8782,6 +8782,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8888961006033376627, guid: 72729343a8b1d8e43824588dfdeb5c20, type: 3}
       propertyPath: PauseCanvas
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8888961006033376627, guid: 72729343a8b1d8e43824588dfdeb5c20, type: 3}
+      propertyPath: fpsController
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 8941238433699312016, guid: 72729343a8b1d8e43824588dfdeb5c20, type: 3}
