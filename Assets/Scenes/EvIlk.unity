@@ -440,6 +440,72 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7004396578580323455, guid: 3f826f6957a0ddb4493e05b1dce89b28, type: 3}
   m_PrefabInstance: {fileID: 203399264}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &814072526
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6232165530728255427, guid: 86ffd4f4615e90049b3a4087a67160fd, type: 3}
+      propertyPath: m_Name
+      value: Pause
+      objectReference: {fileID: 0}
+    - target: {fileID: 6236972982526495733, guid: 86ffd4f4615e90049b3a4087a67160fd, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8075366694091540869, guid: 86ffd4f4615e90049b3a4087a67160fd, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 960
+      objectReference: {fileID: 0}
+    - target: {fileID: 8075366694091540869, guid: 86ffd4f4615e90049b3a4087a67160fd, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 540
+      objectReference: {fileID: 0}
+    - target: {fileID: 8075366694091540869, guid: 86ffd4f4615e90049b3a4087a67160fd, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8075366694091540869, guid: 86ffd4f4615e90049b3a4087a67160fd, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8075366694091540869, guid: 86ffd4f4615e90049b3a4087a67160fd, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8075366694091540869, guid: 86ffd4f4615e90049b3a4087a67160fd, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8075366694091540869, guid: 86ffd4f4615e90049b3a4087a67160fd, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8075366694091540869, guid: 86ffd4f4615e90049b3a4087a67160fd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8075366694091540869, guid: 86ffd4f4615e90049b3a4087a67160fd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8075366694091540869, guid: 86ffd4f4615e90049b3a4087a67160fd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 86ffd4f4615e90049b3a4087a67160fd, type: 3}
+--- !u!1 &814072527 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6236972982526495733, guid: 86ffd4f4615e90049b3a4087a67160fd, type: 3}
+  m_PrefabInstance: {fileID: 814072526}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &919720598
 GameObject:
   m_ObjectHideFlags: 0
@@ -725,11 +791,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1464273093}
   m_CullTransparentMesh: 1
---- !u!1 &2090538376 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8790859192526936742, guid: ccbd6d3812e887e4f91b971080801ac2, type: 3}
-  m_PrefabInstance: {fileID: 7562113028023044835}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2106742176
 GameObject:
   m_ObjectHideFlags: 0
@@ -905,7 +966,8 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 575890581}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 8790859192526936742, guid: ccbd6d3812e887e4f91b971080801ac2, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ccbd6d3812e887e4f91b971080801ac2, type: 3}
@@ -920,7 +982,7 @@ PrefabInstance:
     - target: {fileID: 23193606787439253, guid: 4c840ebfc0e2a3042800efdf11349b8d, type: 3}
       propertyPath: PauseCanvas
       value: 
-      objectReference: {fileID: 2090538376}
+      objectReference: {fileID: 814072527}
     - target: {fileID: 1250128174806354117, guid: 4c840ebfc0e2a3042800efdf11349b8d, type: 3}
       propertyPath: m_audioClip
       value: 
@@ -1011,3 +1073,4 @@ SceneRoots:
   - {fileID: 292894241}
   - {fileID: 203399264}
   - {fileID: 125327190}
+  - {fileID: 814072526}
