@@ -74,7 +74,7 @@ public class PlayerTriggers : MonoBehaviour
 
         }
 
-        if (other.gameObject.CompareTag("Sevgili"))
+        if (other.gameObject.CompareTag("Sevgili") && ekme.totalekmeCount == 5)
         {
             speakSevgili.SetActive(true);
 
@@ -243,6 +243,11 @@ public class PlayerTriggers : MonoBehaviour
 
                 Dialog.Instance.LoadAndStartDialog("Sevgili");
 
+            }
+
+            if (Dialog.Instance.IsDialogFinished)
+            {
+                SceneManager.LoadScene("Son");
             }
         }
 

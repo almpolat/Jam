@@ -10,7 +10,7 @@ public class ekme : MonoBehaviour
     public TextMeshProUGUI textComponent;
 
     // Total number of gül objects
-    private static int totalekmeCount = 5;
+    public static int totalekmeCount = 5;
 
     // Game objects to activate/deactivate based on ekmecounter value
     public GameObject sarýGülObjesi;
