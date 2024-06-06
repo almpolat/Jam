@@ -16,6 +16,7 @@ public class PlayerTriggers : MonoBehaviour
     [SerializeField] GameObject GotoHomePanel;
     [SerializeField] GameObject MesaleInteract;
     [SerializeField] GameObject mezarlýgaGitInteract;
+    [SerializeField] GameObject PickUpPanel;
 
 
     // Static instance of the class.
@@ -101,6 +102,12 @@ public class PlayerTriggers : MonoBehaviour
             mezarlýgaGitInteract.SetActive(true);
 
         }
+
+        if (other.gameObject.CompareTag("bul"))
+        {
+            PickUpPanel.SetActive(true);
+
+        }
     }
 
     private void OnTriggerStay(Collider other)
@@ -145,12 +152,24 @@ public class PlayerTriggers : MonoBehaviour
 
         }
 
+
+        if (other.gameObject.CompareTag("Jumpscare"))
+        {
+            isJumpscareCrossed = false;
+
+        }
+
         if (other.gameObject.CompareTag("EvKapý"))
         {
             mezarlýgaGitInteract.SetActive(false);
 
         }
 
+        if (other.gameObject.CompareTag("bul"))
+        {
+            PickUpPanel.SetActive(false);
+
+        }
     }
 
     private void Update()
@@ -189,6 +208,7 @@ public class PlayerTriggers : MonoBehaviour
             {
 
                 Dialog.Instance.LoadAndStartDialog("Cin");
+                speakPanel.SetActive(false);
 
             }
         }
@@ -213,5 +233,15 @@ public class PlayerTriggers : MonoBehaviour
 
             }
         }
+
+        if (PickUpPanel != null && PickUpPanel.activeInHierarchy)
+        {
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+
+                PickUpPanel.SetActive(false);
+            }
+        }
+
     }
 }
