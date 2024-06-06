@@ -2,7 +2,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Monster : MonoBehaviour
+public class MonsterIkÄ± : MonoBehaviour
 {
     public float speed = 5.0f; // Speed of the GameObject movement along the X-axis
     public AudioClip jumpScareSound; // The jump scare sound clip
@@ -66,10 +66,7 @@ public class Monster : MonoBehaviour
     }
 
 
-    public void Restart()
-    {
-        SceneManager.LoadScene("MezarlýkIlk");
-    }
+
 
     IEnumerator PlayJumpScareRoutine()
     {
@@ -84,7 +81,7 @@ public class Monster : MonoBehaviour
         deathCanvas.SetActive(true);
 
         yield return new WaitForSeconds(4);
-        SceneManager.LoadScene("MezarlýkIlk");
+        SceneManager.LoadScene("MezarlÄ±kIki");
 
 
 
