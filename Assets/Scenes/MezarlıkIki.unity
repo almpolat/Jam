@@ -13450,11 +13450,15 @@ PrefabInstance:
       objectReference: {fileID: 1581388541}
     - target: {fileID: 4846482513390027150, guid: 72729343a8b1d8e43824588dfdeb5c20, type: 3}
       propertyPath: lightTime
-      value: 30
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 4846482513390027150, guid: 72729343a8b1d8e43824588dfdeb5c20, type: 3}
       propertyPath: lightScale
-      value: 30
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 4846482513390027150, guid: 72729343a8b1d8e43824588dfdeb5c20, type: 3}
+      propertyPath: isLanternActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6227891469169363809, guid: 72729343a8b1d8e43824588dfdeb5c20, type: 3}
       propertyPath: m_BoundingSphereOverride.w

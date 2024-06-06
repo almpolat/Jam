@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 public class ekme : MonoBehaviour
@@ -18,6 +17,8 @@ public class ekme : MonoBehaviour
     public GameObject objectToActivate1;
     public GameObject objectToActivate2;
     public GameObject objectToHide;
+
+    private bool isEkili = false;
 
     private void Awake()
     {
@@ -48,6 +49,11 @@ public class ekme : MonoBehaviour
         }
     }
 
+    private void Update()
+    {
+
+    }
+
     private IEnumerator WaitForKeyPress()
     {
         // Wait until the 'E' key is pressed
@@ -56,27 +62,39 @@ public class ekme : MonoBehaviour
             yield return null;
         }
 
-        // Show this object
-        sarýGülObjesi.SetActive(true);
-
-        // Increment the counter
-        ekmecounter++;
-        Debug.Log("ekmecounter: " + ekmecounter);
-
-        // Update the TMP Text content
-        UpdateekmecounterText();
-
-        // Activate objects if ekmecounter equals totalekmeCount
-        if (ekmecounter == totalekmeCount)
+        if (!isEkili)
         {
-            objectToActivate1.SetActive(true);
-            objectToActivate2.SetActive(true);
+            // Show this object
+            sarýGülObjesi.SetActive(true);
 
-            if (objectToHide != null)
+            // Increment the counter
+            ekmecounter++;
+            Debug.Log("ekmecounter: " + ekmecounter);
+
+            // Update the TMP Text content
+            UpdateekmecounterText();
+
+            // Activate objects if ekmecounter equals totalekmeCount
+            if (ekmecounter == 5)
             {
-                objectToHide.SetActive(false);
+
+                Dialog.Instance.LoadAndStartDialog("CýceklerEkýldý");
+
+
+                objectToActivate1.SetActive(true);
+                objectToActivate2.SetActive(true);
+
+
+
+                if (objectToHide != null)
+                {
+                    objectToHide.SetActive(false);
+                }
             }
+
+            isEkili = false;
         }
+
     }
 
     private void UpdateekmecounterText()

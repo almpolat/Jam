@@ -70,7 +70,7 @@ public class LanternLight : MonoBehaviour
 
         //StartCoroutine(ligtMeter());
 
-        isLanternActive = false;
+        isLanternActive = true;
     }
 
     private void Update()
@@ -90,7 +90,7 @@ public class LanternLight : MonoBehaviour
             isLanternActive = false;
             //Reset time & scale
             float duration = 0;
-            lightScale = 30;
+
 
             //Countdown 
             for (float i = lightTime; i > 0; i -= 0.1f)
@@ -106,9 +106,9 @@ public class LanternLight : MonoBehaviour
 
                     Debug.Log("scale : " + lightScale + " duration : " + duration);
                 }
-                else
+                else if (isRefreshed)
                 {
-                    break;
+                    lightScale = 15;
                 }
 
             }
