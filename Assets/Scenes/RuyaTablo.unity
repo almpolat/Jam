@@ -1329,7 +1329,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tmpToShow: {fileID: 825893165}
-  tmpToHide: {fileID: 1705315590}
+  tmpToHide: {fileID: 0}
 --- !u!1 &583284969
 GameObject:
   m_ObjectHideFlags: 0
@@ -1387,9 +1387,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '22.03         31.03
-
-    19.01         24.12'
+  m_text: "\n           24.12"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1452,7 +1450,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -75.81152, y: -39.250313, z: 0, w: 0}
+  m_margin: {x: -13.313721, y: -62.08111, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1963,7 +1961,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 22.03       19.01
+  m_text: '           19.01'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2026,7 +2024,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -90.218506, y: 0, z: 0, w: 0}
+  m_margin: {x: -12.500244, y: -53.325806, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -2097,9 +2095,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '22.03         31.03
+  m_text: '
 
-    19.01 '
+    31.03'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2162,7 +2160,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -75.57947, y: -39.607468, z: 0, w: 0}
+  m_margin: {x: -19.171387, y: -61.494125, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -2939,7 +2937,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tmpToShow: {fileID: 1560392954804575593}
-  tmpToHide: {fileID: 583284969}
+  tmpToHide: {fileID: 0}
 --- !u!1 &1705315590
 GameObject:
   m_ObjectHideFlags: 0
@@ -3030,7 +3028,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 1
+  m_fontStyle: 0
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -3060,7 +3058,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: -18.86023, y: -22.541565, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -3113,7 +3111,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tmpToShow: {fileID: 583284969}
-  tmpToHide: {fileID: 881521871}
+  tmpToHide: {fileID: 0}
 --- !u!1 &1722534652
 GameObject:
   m_ObjectHideFlags: 0
@@ -3372,7 +3370,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tmpToShow: {fileID: 881521871}
-  tmpToHide: {fileID: 825893165}
+  tmpToHide: {fileID: 0}
 --- !u!1001 &1928169002
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4098,9 +4096,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '22.03         31.03
+  m_text: '
 
-    19.01         24.12
 
     13.07'
   m_isRightToLeft: 0
@@ -4165,7 +4162,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -74.57373, y: -80.09888, z: 0, w: 0}
+  m_margin: {x: -19.476318, y: -70.22972, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -4214,6 +4211,22 @@ PrefabInstance:
     - target: {fileID: 3337520112162116089, guid: ccbd6d3812e887e4f91b971080801ac2, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: Restart, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4523925990555090066, guid: ccbd6d3812e887e4f91b971080801ac2, type: 3}
+      propertyPath: m_Size.x
+      value: 4.372917
+      objectReference: {fileID: 0}
+    - target: {fileID: 4523925990555090066, guid: ccbd6d3812e887e4f91b971080801ac2, type: 3}
+      propertyPath: m_Size.z
+      value: 5.2931323
+      objectReference: {fileID: 0}
+    - target: {fileID: 4523925990555090066, guid: ccbd6d3812e887e4f91b971080801ac2, type: 3}
+      propertyPath: m_Center.x
+      value: -0.515197
+      objectReference: {fileID: 0}
+    - target: {fileID: 4523925990555090066, guid: ccbd6d3812e887e4f91b971080801ac2, type: 3}
+      propertyPath: m_Center.z
+      value: -2.1465597
       objectReference: {fileID: 0}
     - target: {fileID: 5608376359619252766, guid: ccbd6d3812e887e4f91b971080801ac2, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4281,6 +4294,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6040572549442631363, guid: ccbd6d3812e887e4f91b971080801ac2, type: 3}
+    - {fileID: 3068916268738102857, guid: ccbd6d3812e887e4f91b971080801ac2, type: 3}
     m_RemovedGameObjects:
     - {fileID: 3234675888599710537, guid: ccbd6d3812e887e4f91b971080801ac2, type: 3}
     - {fileID: 8790859192526936742, guid: ccbd6d3812e887e4f91b971080801ac2, type: 3}
