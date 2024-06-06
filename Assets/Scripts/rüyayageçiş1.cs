@@ -7,7 +7,6 @@ public class rüyayageçiş2 : MonoBehaviour
     private bool playerInTrigger = false;
     [SerializeField] GameObject sleepInteract;
 
-
     // Bu fonksiyon tetikleme alanına bir obje girdiğinde çağrılır
     private void OnTriggerEnter(Collider other)
     {
@@ -16,7 +15,6 @@ public class rüyayageçiş2 : MonoBehaviour
         {
             playerInTrigger = true;
             sleepInteract.SetActive(true);
-
         }
     }
 
@@ -38,8 +36,6 @@ public class rüyayageçiş2 : MonoBehaviour
         {
             Dialog.Instance.LoadAndStartDialog("ruyaTablo");
             SceneManager.LoadScene("RuyaTablo");
-
         }
-
     }
 }

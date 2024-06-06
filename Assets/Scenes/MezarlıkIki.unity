@@ -9139,7 +9139,7 @@ PrefabInstance:
     - target: {fileID: 8941238433699312016, guid: 72729343a8b1d8e43824588dfdeb5c20, type: 3}
       propertyPath: GotoHomePanel
       value: 
-      objectReference: {fileID: 1464090920}
+      objectReference: {fileID: 0}
     - target: {fileID: 8941238433699312016, guid: 72729343a8b1d8e43824588dfdeb5c20, type: 3}
       propertyPath: dialogManager
       value: 

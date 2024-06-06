@@ -6,14 +6,17 @@ using UnityEngine.SceneManagement;
 public class gerçeğegeçiş : MonoBehaviour
 {
     private bool playerInTrigger = false;
+    public GameObject wake;
+    public GameObject objectToHide;
 
     // Bu fonksiyon tetikleme alanına bir obje girdiğinde çağrılır
     private void OnTriggerEnter(Collider other)
     {
         // Eğer tetikleyen obje "Player" tagine sahipse
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Player") && wake != null)
         {
             playerInTrigger = true;
+            wake.SetActive(true);
         }
     }
 
@@ -21,9 +24,10 @@ public class gerçeğegeçiş : MonoBehaviour
     private void OnTriggerExit(Collider other)
     {
         // Eğer tetikleyen obje "Player" tagine sahipse
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Player") && wake != null)
         {
             playerInTrigger = false;
+            wake.SetActive(false);
         }
     }
 
@@ -32,8 +36,14 @@ public class gerçeğegeçiş : MonoBehaviour
         // Eğer "Player" tetikleme alanında ve "E" tuşuna basıldıysa
         if (playerInTrigger && Input.GetKeyDown(KeyCode.E))
         {
-            // Sahne 3'ü yükle
-            SceneManager.LoadScene(2);
+            // objectToHide objesini gizle
+            if (objectToHide != null)
+            {
+                objectToHide.SetActive(false);
+            }
+
+            // Yeni sahneye geç
+            SceneManager.LoadScene(5);
         }
     }
 }
