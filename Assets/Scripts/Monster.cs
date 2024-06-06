@@ -1,25 +1,30 @@
+using System.Collections;
 using UnityEngine;
 
 public class Monster : MonoBehaviour
 {
     public float speed = 5.0f; // Speed of the GameObject movement along the X-axis
     public AudioClip jumpScareSound; // The jump scare sound clip
+    public AudioClip jumpScareSoundMusic;
     public float jumpScareThreshold = 10.0f; // The X position at which the jump scare will trigger
 
-    private AudioSource audioSource;
+    [SerializeField] private AudioSource audioSourceSFX;
+    [SerializeField] private AudioSource audioSourceMusic;
     private bool jumpScarePlayed = false;
 
+    [SerializeField] private GameObject MonsterObject;
     void Start()
     {
         // Get the AudioSource component or add one if it doesn't exist
-        audioSource = GetComponent<AudioSource>();
-        if (audioSource == null)
+        audioSourceSFX = GetComponent<AudioSource>();
+        if (audioSourceSFX == null)
         {
-            audioSource = gameObject.AddComponent<AudioSource>();
+            audioSourceSFX = gameObject.AddComponent<AudioSource>();
         }
 
         // Assign the jump scare sound to the AudioSource
-        audioSource.clip = jumpScareSound;
+
+
     }
 
     void Update()
@@ -33,8 +38,13 @@ public class Monster : MonoBehaviour
             // Check if the GameObject's X position has reached the threshold for the jump scare
             if (!jumpScarePlayed)
             {
-                PlayJumpScare();
+
+                //MonsterObject.GetComponent<Animator>().Play("IDOL");
+                StartCoroutine(PlayJumpScareRoutine());
+
             }
+
+
         }
 
 
@@ -42,8 +52,28 @@ public class Monster : MonoBehaviour
 
     void PlayJumpScare()
     {
+
+        audioSourceSFX.clip = jumpScareSound;
+        audioSourceMusic.clip = jumpScareSoundMusic;
+
         // Play the jump scare sound
-        audioSource.Play();
-        jumpScarePlayed = true; // Ensure the jump scare only plays once
+        audioSourceSFX.Play();
+        audioSourceMusic?.Play();
+
+    }
+
+    IEnumerator PlayJumpScareRoutine()
+    {
+        // Ensure the jump scare only plays once
+        jumpScarePlayed = true;
+        PlayJumpScare();
+        MonsterObject.SetActive(true);
+        yield return new WaitForSeconds(jumpScareThreshold);
+        MonsterObject.SetActive(false);
+        jumpScarePlayed = true;
+
+
+        yield return new WaitForSeconds(jumpScareThreshold);
+        jumpScarePlayed = false;
     }
 }
