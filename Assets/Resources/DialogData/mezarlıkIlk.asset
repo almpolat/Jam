@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogLines:
   - "Ger\xE7ekten kendime inanam\u0131yorum. Gecenin bu saati buraya geldim."
-  - "Ve sadece bir hal\xFCsilasyon i\xE7in"
+  - Ama Marry benim gelmemi istedi buna eminim.
   - "Kahretsin yan\u0131ma fener almay\u0131 unutmusum"
   - "Surdaki kulubeye bak\u0131y\u0131m belkii i\u015Fe yarar bir sey vard\u0131r"
+  - ...
