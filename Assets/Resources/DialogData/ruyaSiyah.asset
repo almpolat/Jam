@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: ruyaSiyah
   m_EditorClassIdentifier: 
   dialogLines:
-  - "Mezarl\u0131kkk"
-  - "Mezarl\u0131ga geeeeell"
-  - "Mezarl\u0131ga geeeeell"
-  - "Mezarl\u0131ga geeeeell"
+  - "Marry : Hayat\u0131m beni ne cabuk unuttun"
+  - "Carl : Marry a\u015Fk\u0131m??"
+  - "Carl : Marry konu\u015F benimle!!"
+  - "Marry : Carl benim yan\u0131ma gelll burda cok korkuyorum."
+  - ...

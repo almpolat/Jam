@@ -14,5 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogLines:
   - "Galiba bu i\u015F g\xF6r\xFCr."
+  - "Ama bunun s\xF6nmesine izin vermesem iyi olur, yn\u0131mda \xE7akmak yok."
+  - "Ama san\u0131rsam su mesaaleleri kullanabilirim."
   - "\u015Eimdi Marry'mi ziyaret ediyim"
-  - "\u015Eimdi Marry'mi ziyaret ediyim."
+  - ...
