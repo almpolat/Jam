@@ -5,6 +5,8 @@ public class MezrlıkIlk : MonoBehaviour
     // Start is called before the first frame update
 
     [SerializeField] private GameObject masadakiFener;
+
+    [SerializeField] private GameObject dumanTrigger;
     void Start()
     {
         Dialog.Instance.LoadAndStartDialog("mezarlıkIlk");
@@ -15,6 +17,7 @@ public class MezrlıkIlk : MonoBehaviour
     void Update()
     {
         checkFener();
+        checkDuman();
     }
 
     void checkFener()
@@ -23,6 +26,18 @@ public class MezrlıkIlk : MonoBehaviour
         {
             Dialog.Instance.LoadAndStartDialog("mezarlikFenerAAldıktanSonra");
             masadakiFener = null;
+        }
+    }
+
+
+    void checkDuman()
+    {
+        if (PlayerTriggers.Instance.isDumanSeen)
+        {
+            Dialog.Instance.LoadAndStartDialog("Duman");
+            //dumanTrigger = null;
+            dumanTrigger.SetActive(false);
+            PlayerTriggers.Instance.isDumanSeen = false;
         }
     }
 }

@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Monster : MonoBehaviour
 {
@@ -13,6 +14,8 @@ public class Monster : MonoBehaviour
     private bool jumpScarePlayed = false;
 
     [SerializeField] private GameObject MonsterObject;
+
+    public GameObject deathCanvas;
     void Start()
     {
         // Get the AudioSource component or add one if it doesn't exist
@@ -30,10 +33,10 @@ public class Monster : MonoBehaviour
     void Update()
     {
 
-        if (PlayerTriggers.Instance.isJumpscareCrossed)
+        if (LanternLight.Instance.lightScale <= 0)
         {
             // Move the GameObject along the X-axis
-            transform.Translate(Vector3.forward * speed * Time.deltaTime);
+            //transform.Translate(Vector3.forward * speed * Time.deltaTime);
 
             // Check if the GameObject's X position has reached the threshold for the jump scare
             if (!jumpScarePlayed)
@@ -62,6 +65,12 @@ public class Monster : MonoBehaviour
 
     }
 
+
+    public void Restart()
+    {
+        SceneManager.LoadScene("MezarlýkIlk");
+    }
+
     IEnumerator PlayJumpScareRoutine()
     {
         // Ensure the jump scare only plays once
@@ -72,8 +81,14 @@ public class Monster : MonoBehaviour
         MonsterObject.SetActive(false);
         jumpScarePlayed = true;
 
+        deathCanvas.SetActive(true);
 
-        yield return new WaitForSeconds(jumpScareThreshold);
-        jumpScarePlayed = false;
+        yield return new WaitForSeconds(4);
+        SceneManager.LoadScene("MezarlýkIlk");
+
+
+
+
+
     }
 }

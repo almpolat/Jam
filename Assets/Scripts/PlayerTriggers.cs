@@ -7,7 +7,9 @@ public class PlayerTriggers : MonoBehaviour
     public GameObject MaviGül;
     public GameObject dialogCanvas;
     public GameObject dialogManager;
+
     public bool isJumpscareCrossed;
+    public bool isDumanSeen;
 
 
     [SerializeField] GameObject InteractPanel;
@@ -108,6 +110,12 @@ public class PlayerTriggers : MonoBehaviour
             PickUpPanel.SetActive(true);
 
         }
+
+        if (other.gameObject.CompareTag("Duman"))
+        {
+            isDumanSeen = true;
+
+        }
     }
 
     private void OnTriggerStay(Collider other)
@@ -190,14 +198,14 @@ public class PlayerTriggers : MonoBehaviour
             }
         }
 
-        if (GotoHomePanel != null && GotoHomePanel.activeInHierarchy)
+        if (GotoHomePanel != null && GotoHomePanel.activeInHierarchy && gültopla.gülcounter == 5)
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
 
                 GotoHomePanel.SetActive(false);
                 AudioManager.Instance.playAudioCar();
-                SceneManager.LoadScene(2);
+                SceneManager.LoadScene("EvIkýncý");
 
             }
         }

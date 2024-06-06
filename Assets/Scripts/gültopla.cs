@@ -1,14 +1,15 @@
 using System.Collections;
 using TMPro;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class gültopla : MonoBehaviour
 {
     // Counter to keep track of triggers
-    private static int gülcounter = 0;
+    public static int gülcounter = 0;
     public GameObject Hideprefab;
     public GameObject Activeprefab;
+
+
 
 
     // Reference to the TMP Text component, shared among all instances
@@ -69,6 +70,8 @@ public class gültopla : MonoBehaviour
             // Hide the TMP text if gülcounter equals totalGülCount
             if (gülcounter == totalGülCount)
             {
+                Dialog.Instance.LoadAndStartDialog("GülToplandý");
+                //goToHomePanel.SetActive(true);
                 gülcounterText.gameObject.SetActive(false);
                 Activeprefab.SetActive(true);
                 Hideprefab.SetActive(false);

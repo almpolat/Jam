@@ -24,6 +24,7 @@ TagManager:
   - Yatak
   - Tablo
   - "EvKap\u0131"
+  - Duman
   layers:
   - Default
   - TransparentFX
