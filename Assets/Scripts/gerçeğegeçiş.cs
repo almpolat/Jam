@@ -7,7 +7,11 @@ public class gerçeğegeçiş : MonoBehaviour
 {
     private bool playerInTrigger = false;
     public GameObject wake;
-    public GameObject objectToHide;
+    public GameObject tablo1;
+    public GameObject tablo2;
+    public GameObject tablo3;
+    public GameObject tablo4;
+    public GameObject tablo5;
 
     // Bu fonksiyon tetikleme alanına bir obje girdiğinde çağrılır
     private void OnTriggerEnter(Collider other)
@@ -33,17 +37,11 @@ public class gerçeğegeçiş : MonoBehaviour
 
     private void Update()
     {
-        // Eğer "Player" tetikleme alanında ve "E" tuşuna basıldıysa
+       if(tablo1.activeInHierarchy&& tablo2.activeInHierarchy && tablo3.activeInHierarchy && tablo4.activeInHierarchy && tablo5.activeInHierarchy)
         if (playerInTrigger && Input.GetKeyDown(KeyCode.E))
         {
-            // objectToHide objesini gizle
-            if (objectToHide != null)
-            {
-                objectToHide.SetActive(false);
-            }
-
             // Yeni sahneye geç
-            SceneManager.LoadScene("Evıkıncırüyafter");
+            SceneManager.LoadScene("EvIkıncırüyafter");
         }
     }
 }
