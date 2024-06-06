@@ -20,12 +20,9 @@ public class ekme : MonoBehaviour
 
     private bool isEkili = false;
 
-    private void Awake()
+    private void Start()
     {
-        // Start with the objects inactive
-        sarýGülObjesi.SetActive(false);
-        objectToActivate1.SetActive(false);
-        objectToActivate2.SetActive(false);
+        ekmecounter = 0;
 
         // Ensure object to hide is active
         if (objectToHide != null)
@@ -35,8 +32,17 @@ public class ekme : MonoBehaviour
         if (textComponent != null)
         {
             textComponent.gameObject.SetActive(true);
-            textComponent.text = ekmecounter + "/" + totalekmeCount + " gül ekildi";
+            textComponent.text = ekmecounter + "/" + totalekmeCount + " cicek ekildi";
         }
+    }
+    private void Awake()
+    {
+        // Start with the objects inactive
+        sarýGülObjesi.SetActive(false);
+        objectToActivate1.SetActive(false);
+        objectToActivate2.SetActive(false);
+
+
     }
 
     private void OnTriggerEnter(Collider other)
@@ -102,7 +108,7 @@ public class ekme : MonoBehaviour
         // Update the TMP text to show the current counter value
         if (textComponent != null)
         {
-            textComponent.text = ekmecounter + "/" + totalekmeCount + " ekilen gül";
+            textComponent.text = ekmecounter + "/" + totalekmeCount + " ekilen cicek";
 
             // Hide the TMP text if ekmecounter equals totalekmeCount
             if (ekmecounter == totalekmeCount)
