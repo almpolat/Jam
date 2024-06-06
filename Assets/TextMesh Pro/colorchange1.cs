@@ -20,6 +20,6 @@ public class colorchangekýrmýzý : MonoBehaviour
     void UpdateTextColor()
     {
         // Metni renklendir
-        textMeshProUGUI.text = "<color=red>1.Görev - Çiçek toplamak</color>\n<color=green>2.Görev - Çiçekleri ekmek</color>\n<color=red>3.Görev - Duayý bulup okumak</color>";
+        textMeshProUGUI.text = "<color=red>1.Görev - Çiçek toplamak</color>\n<color=red>2.Görev - Çiçekleri ekmek</color>\n<color=red>3.Görev - Duayý bulup okumak</color>";
     }
 }
