@@ -11,6 +11,7 @@ public class PlayerTriggers : MonoBehaviour
     public GameObject kuran;
     public GameObject kuranMasa;
 
+
     public bool isJumpscareCrossed;
     public bool isDumanSeen;
 
@@ -122,7 +123,6 @@ public class PlayerTriggers : MonoBehaviour
 
         }
     }
-
     private void OnTriggerStay(Collider other)
     {
         if (other.gameObject.CompareTag("Mesale"))

@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class monsterJumpScaare : MonoBehaviour
 {
-    public float speed = 20;
+    public float speed = 50;
     // Start is called before the first frame update
     void Start()
     {
