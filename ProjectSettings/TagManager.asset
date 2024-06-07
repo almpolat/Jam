@@ -28,6 +28,7 @@ TagManager:
   - Duman
   - OzelMesale
   - kuranMasa
+  - jumpScareRun
   layers:
   - Default
   - TransparentFX
