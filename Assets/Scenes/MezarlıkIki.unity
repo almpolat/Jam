@@ -13542,6 +13542,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6630996014023189896, guid: e82caff8fef15354cba6e0a8b99f4100, type: 3}
+      propertyPath: m_TagString
+      value: kuranMasa
+      objectReference: {fileID: 0}
     - target: {fileID: 6754347651985748992, guid: e82caff8fef15354cba6e0a8b99f4100, type: 3}
       propertyPath: m_Name
       value: ekilecekmezar5
@@ -14217,19 +14221,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6227891469169363809, guid: 72729343a8b1d8e43824588dfdeb5c20, type: 3}
       propertyPath: m_BoundingSphereOverride.w
-      value: NaN
+      value: 1.1439819e-36
       objectReference: {fileID: 0}
     - target: {fileID: 6227891469169363809, guid: 72729343a8b1d8e43824588dfdeb5c20, type: 3}
       propertyPath: m_BoundingSphereOverride.x
-      value: 7.22e-43
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6227891469169363809, guid: 72729343a8b1d8e43824588dfdeb5c20, type: 3}
       propertyPath: m_BoundingSphereOverride.y
-      value: 16225.227
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6227891469169363809, guid: 72729343a8b1d8e43824588dfdeb5c20, type: 3}
       propertyPath: m_BoundingSphereOverride.z
-      value: 7.22e-43
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7990122648689215679, guid: 72729343a8b1d8e43824588dfdeb5c20, type: 3}
       propertyPath: m_IsActive
@@ -14256,9 +14260,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 844293569}
     - target: {fileID: 8941238433699312016, guid: 72729343a8b1d8e43824588dfdeb5c20, type: 3}
+      propertyPath: kuran
+      value: 
+      objectReference: {fileID: 2075545193}
+    - target: {fileID: 8941238433699312016, guid: 72729343a8b1d8e43824588dfdeb5c20, type: 3}
       propertyPath: "MaviG\xFCl"
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 8941238433699312016, guid: 72729343a8b1d8e43824588dfdeb5c20, type: 3}
+      propertyPath: kuranMasa
+      value: 
+      objectReference: {fileID: 977305573}
     - target: {fileID: 8941238433699312016, guid: 72729343a8b1d8e43824588dfdeb5c20, type: 3}
       propertyPath: speakPanel
       value: 
@@ -14285,7 +14297,7 @@ PrefabInstance:
       objectReference: {fileID: 249686309}
     - target: {fileID: 9013957006597378462, guid: 72729343a8b1d8e43824588dfdeb5c20, type: 3}
       propertyPath: m_BoundingSphereOverride.w
-      value: 0
+      value: 7.793483e-37
       objectReference: {fileID: 0}
     - target: {fileID: 9013957006597378462, guid: 72729343a8b1d8e43824588dfdeb5c20, type: 3}
       propertyPath: m_BoundingSphereOverride.x
@@ -14293,11 +14305,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9013957006597378462, guid: 72729343a8b1d8e43824588dfdeb5c20, type: 3}
       propertyPath: m_BoundingSphereOverride.y
-      value: -6.4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9013957006597378462, guid: 72729343a8b1d8e43824588dfdeb5c20, type: 3}
       propertyPath: m_BoundingSphereOverride.z
-      value: 51.2
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
