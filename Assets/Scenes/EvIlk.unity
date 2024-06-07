@@ -1103,7 +1103,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1927664517727937671, guid: 4c840ebfc0e2a3042800efdf11349b8d, type: 3}
       propertyPath: movementSpeed
-      value: 10
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2936762393354359433, guid: 4c840ebfc0e2a3042800efdf11349b8d, type: 3}
       propertyPath: m_Color.a
