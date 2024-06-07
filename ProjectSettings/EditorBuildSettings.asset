@@ -6,11 +6,14 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: "Assets/Scenes/Men\xFC.unity"
+    guid: 074777d27262a1741b17f5c061c47bc6
+  - enabled: 1
     path: Assets/Scenes/Araba.unity
     guid: 8c7e400a5b22dbc4cbde6dfaf2467127
   - enabled: 1
-    path: "Assets/Scenes/EvIk\u0131nc\u0131r\xFCyafter.unity"
-    guid: f4584b17ac5307f478b174f56d3c8136
+    path: Assets/Scenes/Loadingafteraraba.unity
+    guid: fa18a4d1356f60a40837fa12dd31cefd
   - enabled: 1
     path: Assets/Scenes/EvIlk.unity
     guid: e58ace0c3828af74cabb89dc64cbacc9
@@ -21,8 +24,14 @@ EditorBuildSettings:
     path: Assets/Scenes/EvIlkAfterRuya.unity
     guid: 8e5a1ba378cd74a438d3da06d9abcec7
   - enabled: 1
+    path: Assets/Scenes/LoadingMezar1.unity
+    guid: 9c8138c7c76d80c439f147974287f4bb
+  - enabled: 1
     path: "Assets/Scenes/Mezarl\u0131kIlk.unity"
     guid: 51c79f01698fd0144a328bbd17b0fecf
+  - enabled: 1
+    path: "Assets/Scenes/Loadingmezar1d\xF6n\xFC\u015F.unity"
+    guid: ac3a28f0bc6eb9d4aa25f5e6d96a7d1b
   - enabled: 1
     path: "Assets/Scenes/EvIk\u0131nc\u0131.unity"
     guid: 6e86b7a28321a2e4ab19b1612ca9c4a5
@@ -30,8 +39,17 @@ EditorBuildSettings:
     path: Assets/Scenes/RuyaTablo.unity
     guid: abd787977b2467b49a98dfdb412acbdd
   - enabled: 1
+    path: "Assets/Scenes/EvIk\u0131nc\u0131r\xFCyafter.unity"
+    guid: f4584b17ac5307f478b174f56d3c8136
+  - enabled: 1
+    path: Assets/Scenes/LoadingMezar2.unity
+    guid: 3ffce6a970a51f3449c149a9c9d94cee
+  - enabled: 1
     path: "Assets/Scenes/Mezarl\u0131kIki.unity"
     guid: 6882571990730fe44b77097dd67a2eba
+  - enabled: 1
+    path: Assets/Scenes/LoadingSon.unity
+    guid: 1c2a6f89d8ce541438042f8ac9ccfc84
   - enabled: 1
     path: Assets/Scenes/son.unity
     guid: 27f815ed85fc59c4389fb7c749010086

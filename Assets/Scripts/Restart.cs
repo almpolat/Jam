@@ -5,9 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class Restart : MonoBehaviour
 {
-    public void Restart1()
+    public void Start1()
     {
         SceneManager.LoadScene("Araba");
+    }
+    public void Restart1()
+    {
+        SceneManager.LoadScene("Menü");
     }
 
     public void RestartCurrentScene()

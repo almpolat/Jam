@@ -12,7 +12,7 @@ public class mezarlıkikigidiş : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             // 7. sahneyi yükle
-            SceneManager.LoadScene("MezarlıkIki");
+            SceneManager.LoadScene("LoadingMezar2");
         }
     }
 }

@@ -224,7 +224,7 @@ public class PlayerTriggers : MonoBehaviour
 
                 GotoHomePanel.SetActive(false);
                 AudioManager.Instance.playAudioCar();
-                SceneManager.LoadScene("EvIkýncý");
+                SceneManager.LoadScene("Loadingmezar1dönüþ");
 
             }
         }
@@ -254,7 +254,7 @@ public class PlayerTriggers : MonoBehaviour
 
             if (Dialog.Instance.IsDialogFinished && kuran.activeInHierarchy && epressed)
             {
-                SceneManager.LoadScene("Son");
+                SceneManager.LoadScene("LoadingSon");
             }
 
         }
@@ -264,7 +264,7 @@ public class PlayerTriggers : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.E))
             {
 
-                SceneManager.LoadScene("MezarlýkIlk");
+                SceneManager.LoadScene("LoadingMezar1");
 
             }
         }

@@ -13,7 +13,7 @@ public class Arabasahnesibitiş : MonoBehaviour
         if (other.CompareTag("Car"))
         {
             // Sahne 1'i yükler
-            SceneManager.LoadScene("EvIlk");
+            SceneManager.LoadScene("Loadingafteraraba");
         }
     }
 }
