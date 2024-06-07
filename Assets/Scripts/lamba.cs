@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class lamba : MonoBehaviour
@@ -14,6 +12,7 @@ public class lamba : MonoBehaviour
         foreach (GameObject obj in ellambaObjects)
         {
             obj.SetActive(false);
+
         }
 
         // Eðer hiç ellamba objesi bulunamadýysa uyarý ver

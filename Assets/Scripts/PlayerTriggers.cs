@@ -8,9 +8,13 @@ public class PlayerTriggers : MonoBehaviour
     public GameObject dialogCanvas;
     public GameObject dialogManager;
 
+    public GameObject kuran;
+    public GameObject kuranMasa;
+
     public bool isJumpscareCrossed;
     public bool isDumanSeen;
 
+    private bool epressed = false;
 
     [SerializeField] GameObject InteractPanel;
     [SerializeField] GameObject speakPanel;
@@ -77,6 +81,7 @@ public class PlayerTriggers : MonoBehaviour
         if (other.gameObject.CompareTag("Sevgili") && ekme.ekmecounter == 5)
         {
             speakSevgili.SetActive(true);
+            kuranMasa.SetActive(true);
 
         }
 
@@ -242,13 +247,16 @@ public class PlayerTriggers : MonoBehaviour
             {
 
                 Dialog.Instance.LoadAndStartDialog("Sevgili");
+                epressed = true;
+
 
             }
 
-            if (Dialog.Instance.IsDialogFinished)
+            if (Dialog.Instance.IsDialogFinished && kuran.activeInHierarchy && epressed)
             {
                 SceneManager.LoadScene("Son");
             }
+
         }
 
         if (mezarlýgaGitInteract != null && mezarlýgaGitInteract.activeInHierarchy)
